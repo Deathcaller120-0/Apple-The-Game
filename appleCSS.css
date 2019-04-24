@@ -1,0 +1,49 @@
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted grey;
+}
+.tooltip .tooltiptext {
+	visibility: hidden; 
+	width: 200px; 
+	background-color:#000; 
+	color: #fff; 
+	text-align: center; 
+	padding: 5px 0; 
+	border-radius: 15px; 
+	position: absolute; 
+	z-index: 1; 
+	bottom: 100%; 
+	left: 50%; 
+	margin-left: -60px;
+}
+.tooltip:hover .tooltiptext {
+	visibility:visible;
+}
+.text {
+	font-family:arial;
+	font-size:18px;
+	background-color:#fff;
+	color:#000;
+}
+button {
+	height:40px;
+	width:260px;
+	border-style:solid;
+	font-size:20px;
+	color:#fff;
+	background-color:#000;
+	border-radius:10px;
+	border-color:#000;
+}
+.heroImage {
+	background: url('file:///media/removable/PORTABLE/AppleTheGame!/assets/applepic.png') no-repeat center; 
+	background-size: cover;
+	position: relative;
+	padding:50px;
+}
+.finishButton{
+	border-style:solid;
+	margin:auto;
+	border-radius:20px;
+}
