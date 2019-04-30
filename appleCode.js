@@ -56,6 +56,21 @@ function unlocker(){
 	} else {
 		document.getElementById('hireButton').style.backgroundColor ="#323639";
 	}
+	if (app >= gWorkerPrice){
+		document.getElementById('goodHireButton').style.backgroundColor="#00beff";
+	} else {
+		document.getElementById('goodHireButton').style.backgroundColor="#323639"
+	}
+	if (dia >= diaMinerPrice){
+		document.getElementById('minerHireButton').style.backgroundColor="#33d6ff";
+	} else {
+		document.getElementById('minerHireButton').style.backgroundColor="#323639";
+	}
+	if (ameth >= amethMinerPrice){
+		document.getElementById('amethystWorker').style.backgroundColor="#7f00ff";
+	} else {
+		document.getElementById('amethystWorker').style.backgroundColor="#323639";
+	}
 	if (bread >= breadMakerPrice){
 		document.getElementById('breadMakerButton').style.backgroundColor ="#b59a4a";
 	} else {
