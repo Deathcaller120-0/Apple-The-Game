@@ -91,7 +91,7 @@ function unlocker(){
 	} else {
 		document.getElementById('amethystWorker').style.backgroundColor="#323639";
 	}
-	if (ameth == 30){
+	if (ameth >= 30){
 		document.getElementById('breadButton').style.backgroundColor="#bf8040";
 	} else {
 		document.getElementById('breadButton').style.backgroundColor="#323639";
