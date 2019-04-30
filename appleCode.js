@@ -71,7 +71,11 @@ function unlocker(){
 	} else {
 		document.getElementById('minerHireButton').style.backgroundColor="#323639";
 	}
-	if (dia >= )
+	if (dia >= 20){
+		document.getElementById('amethystButton').style.backgroundColor="#8000ff";
+	} else {
+		document.getElementById('amethystButton').style.backgroundColor="#323639";
+	}
 	if (ameth >= amethMinerPrice){
 		document.getElementById('amethystWorker').style.backgroundColor="#7f00ff";
 	} else {
