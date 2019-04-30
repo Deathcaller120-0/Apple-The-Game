@@ -42,6 +42,7 @@ var breadMakerTime = breadMaker / time;
 var resetAmount = 0;
 var cooldownSec = 120;
 setInterval(workerCheck, 500);
+setInterval(unlocker, 500);
 setInterval(save, 30000);
 //Other
 function unlocker(){
@@ -205,12 +206,12 @@ function bWorkerBuy() {
 		document.getElementById('badNoApple').innerHTML="How don't You have enough apples!";
 		setTimeout(clearNos, 5000);
 	}
-	if (app >= 10 ){
+	if (app >= 10){
 		if(bWorker >= 600){
 			document.getElementById('badHireButton').disabled="true";
 		}
 		bWorker++;
-		document.getElementById('bWorkerAmount').innerHTML=bWorker + " Bad Apple Pickers";
+		document.getElementById('badWorkerAmount').innerHTML=bWorker + " Bad Apple Pickers";
 		var appleRemove = 10;
 		do{
 			app--;
@@ -273,7 +274,7 @@ function diaMinerHire(){
 			diamondRemove--;
 		} while (diamondRemove >= 1)
 		setInterval(diaMinerGain, 10000 - diaMinerTime);
-		document.getElementById('diaMinerAmount').innerHTML= diaMiner + " Miner(s)";
+		document.getElementById('minerAmount').innerHTML= diaMiner + " Miner(s)";
 		document.getElementById('diaAmount').innerHTML= dia + " Diamond(s)";
 	}
 }
@@ -308,6 +309,8 @@ function breadMakerBuy(){
 			bread--;
 			breadRemove--;
 		} while (breadRemove >= 1)
+		document.getElementById('breadAmount').innerHTML=bread + " Bread";
+		document.getElementById('breadMakerAmount').innerHTML=breadMaker + " Bread Bakers"
 	}
 }
 //Get/Buy resources
@@ -337,7 +340,7 @@ document.addEventListener('keyup', function (event) {
 		return;
 	}
 	var key = event.key || event.keyCode;
-	if (key === 'Space' || key === ' ' || key === 49) {
+	if (key === 'Space' || key === ' ' || key === 32) {
 		setTimeout(appleGain, 10);
 	}
 });
