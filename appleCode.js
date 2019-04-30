@@ -508,9 +508,6 @@ function finishTry(){
 		clearInterval(diaMinerGain);
 		clearInterval(amethGain);
 	}
-	if(resetAmount == 1){
-		window.alert("Well done.");
-	}
 }
 //Save Managment
 //Load
