@@ -51,6 +51,11 @@ function unlocker(){
 	} else {
 		document.getElementById('badHireButton').style.backgroundColor ="#323639";
 	}
+	if (app >= 50){
+		document.getElementById('diaButton').style.backgroundColor="#00ffff";
+	} else {
+		document.getElementById('diaButton').style.backgroundColor="#323639";
+	}
 	if (app >= nWorkerPrice){
 		document.getElementById('hireButton').style.backgroundColor ="#78ff00";
 	} else {
@@ -66,6 +71,7 @@ function unlocker(){
 	} else {
 		document.getElementById('minerHireButton').style.backgroundColor="#323639";
 	}
+	if (dia >= )
 	if (ameth >= amethMinerPrice){
 		document.getElementById('amethystWorker').style.backgroundColor="#7f00ff";
 	} else {
@@ -172,13 +178,10 @@ function workerCheck(){
 	if (nWorker >= 600){
 		document.getElementById('hireButton').disabled="true";
 		document.getElementById('hireButton').innerHTML="MAXED OUT";
-	} else if (nWorker >= 20 && nWorkerPrice == 25){
-		nWorkerPrice++;
-		nWorkerPrice++;
-		document.getElementById('nWorkerPrice').innerHTML=nWorkerPrice;
 	} else if (nWorkerCount == 0){
 		nWorkerPrice++;
 		nWorkerPrice++;
+		nWorkerCount = 30;
 		document.getElementById('nWorkerPrice').innerHTML=nWorkerPrice;
 	}
 	if (gWorkerPrice == null || gWorkerPrice == NaN || gWorkerPrice == undefined){
@@ -190,6 +193,7 @@ function workerCheck(){
 	} else if (gWorkerCount == 0){
 		gWorkerPrice++;
 		gWorkerPrice++;
+		gWorkerCount = 40;
 		document.getElementById('gWorkerPrice').innerHTML=gWorkerPrice;
 	}
 	if (diaMiner >= 300){
@@ -198,6 +202,7 @@ function workerCheck(){
 	} else if (diaMinerCount == 0){
 		diaMinerPrice++;
 		diaMinerPrice++;
+		diaMinerCount = 10;
 		document.getElementById('diaMinerPrice').innerHTML=diaMinerPrice;
 	}
 	if (amethMiner >= 100){
@@ -206,6 +211,7 @@ function workerCheck(){
 	} else if (amethMinerCount == 0){
 		amethMinerPrice++;
 		amethMinerPrice++;
+		amethMinerCount = 10;
 		document.getElementById('amethMinerPrice').innerHTML=amethMinerPrice;
 	}
 	if (breadMaker >= 75){
@@ -213,6 +219,7 @@ function workerCheck(){
 		document.getElementById('breadMakerButton').disabled="true";
 	} else if (breadMakerCount == 0){
 		breadMakerPrice++;
+		breadMakerCount = 5;
 		document.getElementById('breadMakerPrice').innerHTML=breadMakerPrice;
 	}
 }
@@ -634,9 +641,6 @@ function debugReset(){
 		do{amethMiner--;}while(amethMiner >= 0)
 		do{amethMiner++;}while(amethMiner <= -1)
 		console.log(diaMiner + amethMiner);
-		do{x2SpeedUpvar--;}while(x2SpeedUpvar >= 1)
-		do{x2SpeedUpvar++;}while(x2SpeedUpvar <= -1)
-		console.log(x2SpeedUpvar);
 		do{timeSpeedUp--;}while(timeSpeedUp >= 1)
 		do{timeSpeedUp++;}while(timeSpeedUp <= -1)
 		console.log(timeSpeedUp);
