@@ -567,8 +567,8 @@ function workerSpeedUp(){
 			diamondRemove--;
 			dia--;
 		} while (diamondRemove >= 1)
-		document.getElementById('nWorkerSpeed').disabled="true";
-		document.getElementById('nWorkerSpeed').innerHTML="Sold Out"
+		document.getElementById('workerSpeed').disabled="true";
+		document.getElementById('workerSpeed').innerHTML="Sold Out"
 	}
 	document.getElementById('diaAmount').innerHTML=dia + " diamond(s)";
 }
