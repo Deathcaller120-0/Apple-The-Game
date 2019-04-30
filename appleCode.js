@@ -46,14 +46,19 @@ setInterval(save, 30000);
 //Other
 function unlocker(){
 	if (app >= 10){
-		document.getElementById('badHireButton').style.color="#994d00";
+		document.getElementById('badHireButton').style.background-color="#994d00";
 	} else {
-		document.getElementById('badHireButton').style.color="rgb(50, 54, 57)";
+		document.getElementById('badHireButton').style.background-color="#323639";
 	}
 	if (app >= nWorkerPrice){
-		document.getElementById('hireButton').style.color="";
+		document.getElementById('hireButton').style.background-color="#78ff00";
 	} else {
-		document.getElementById('hireButton').style.color="rgb(50, 54, 57)";
+		document.getElementById('hireButton').style.background-color="#323639";
+	}
+	if (bread >= breadMakerPrice){
+		document.getElementById('breadMakerButton').style.background-color="#b59a4a";
+	} else {
+		document.getElementById('breadMakerButton').style.background-color="#323639";
 	}
 }
 //NaN and null Terminator
