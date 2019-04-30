@@ -46,20 +46,20 @@ setInterval(unlocker, 500);
 setInterval(save, 30000);
 //Other
 function unlocker(){
-	if (app >== 10){
-		document.getElementById('badHireButton').style.background-color="#994d00";
+	if (app >= 10){
+		document.getElementById('badHireButton').style.backgroundColor ="#994d00";
 	} else {
-		document.getElementById('badHireButton').style.background-color="#323639";
+		document.getElementById('badHireButton').style.backgroundColor ="#323639";
 	}
-	if (app >== nWorkerPrice){
-		document.getElementById('hireButton').style.background-color="#78ff00";
+	if (app >= nWorkerPrice){
+		document.getElementById('hireButton').style.backgroundColor ="#78ff00";
 	} else {
-		document.getElementById('hireButton').style.background-color="#323639";
+		document.getElementById('hireButton').style.backgroundColor ="#323639";
 	}
-	if (bread >== breadMakerPrice){
-		document.getElementById('breadMakerButton').style.background-color="#b59a4a";
+	if (bread >= breadMakerPrice){
+		document.getElementById('breadMakerButton').style.backgroundColor ="#b59a4a";
 	} else {
-		document.getElementById('breadMakerButton').style.background-color="#323639";
+		document.getElementById('breadMakerButton').style.backgroundColor ="#323639";
 	}
 }
 //NaN and null Terminator
