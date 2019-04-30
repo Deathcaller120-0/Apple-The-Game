@@ -19,20 +19,25 @@ var appleUp = false;
 var bWorker = 0;
 var nWorker = 0;
 var nWorkerPrice = 25;
+var nWorkerCount = 30;
 var gWorker = 0;
 var gWorkerPrice = 40;
+var gWorkerCount = 20;
 var diaMiner = 0;
 var diaMinerPrice = 10;
 var amethMiner = 0;
 var amethMinerPrice = 10;
-var x2SpeedUpvar = 0;
-var timeSpeedUp = 0;
-var time = 100 - timeSpeedUp;
+var amethMinerCount = 10;
+var breadMaker = 0;
+var breadMakerPrice = 5;
+var breadMakerCount = 5;
+var time = 100;
 var bWorkerTime = bWorker / time;
 var nWorkerTime = nWorker / time;
 var gWorkerTime = gWorker / time;
 var diaMinerTime = diaMiner / time;
 var amethMinerTime = amethMiner / time;
+var breadMakerTime = breadMaker / time;
 var resetAmount = 0;
 var cooldownSec = 120;
 setInterval(workerCheck, 500);
@@ -127,37 +132,54 @@ function workerCheck(){
 		document.getElementById('badHireButton').disabled="true";
 		document.getElementById('badHireButton').innerHTML="MAXED OUT";
 	}
+	if (nWorkerPrice == null || nWorkerPrice == NaN || nWorkerPrice == undefined){
+		nWorkerPrice = 25;
+	}
 	if (nWorker >= 600){
 		document.getElementById('hireButton').disabled="true";
 		document.getElementById('hireButton').innerHTML="MAXED OUT";
 	} else if (nWorker >= 20 && nWorkerPrice == 25){
 		nWorkerPrice++;
 		nWorkerPrice++;
-		document.getElementById('nWorkerPrice').innerHTML=nWorkerPrice + " apples for Picker" + '<span class="tooltiptext text">Does not steal apples.</span>';
+		document.getElementById('nWorkerPrice').innerHTML=nWorkerPrice;
+	} else if (nWorkerCount == 0){
+		nWorkerPrice++;
+		nWorkerPrice++;
+		document.getElementById('nWorkerPrice').innerHTML=nWorkerPrice;
+	}
+	if (gWorkerPrice == null || gWorkerPrice == NaN || gWorkerPrice == undefined){
+		gWorkerPrice = 40;
 	}
 	if (gWorker >= 600){
 		document.getElementById('goodHireButton').disabled="true";
 		document.getElementById('goodHireButton').innerHTML="MAXED OUT";
-	} else if (gWorker >= 20 && gWorkerPrice == 40){
+	} else if (gWorkerCount == 0){
 		gWorkerPrice++;
 		gWorkerPrice++;
-		document.getElementById('gWorkertest').innerHTML=gWorkerPrice + " apples for Good Picker" + '<span class="tooltiptext text">Gives 2 apples per cycle.</span>';
+		document.getElementById('gWorkerPrice').innerHTML=gWorkerPrice;
 	}
 	if (diaMiner >= 300){
 		document.getElementById('minerHireButton').disabled="true";
 		document.getElementById('minerHireButton').innerHTML="MAXED OUT";
-	} else if (diaMiner >= 20 && diaMinerPrice == 10){
+	} else if (diaMinerCount == 0){
 		diaMinerPrice++;
 		diaMinerPrice++;
-		document.getElementById('diaMinertest').innerHTML=diaMinerPrice + " Diamonds for Diamond Miner";
+		document.getElementById('diaMinerPrice').innerHTML=diaMinerPrice;
 	}
 	if (amethMiner >= 100){
 		document.getElementById('amethystWorker').innerHTML="MAXED OUT";
 		document.getElementById('amethystWorker').disabled="true";
-	} else if (amethMiner >= 20 && amethMinerPrice == 10){
+	} else if (amethMinerCount == 0){
 		amethMinerPrice++;
 		amethMinerPrice++;
-		document.getElementById('amethMinertest').innerHTML=amethMinerPrice + ' Amethyst for Amethyst Miner';
+		document.getElementById('amethMinerPrice').innerHTML=amethMinerPrice;
+	}
+	if (breadMaker >= 75){
+		document.getElementById('breadMakerButton').innerHTML="MAXED OUT";
+		document.getElementById('breadMakerButton').disabled="true";
+	} else if (breadMakerCount == 0){
+		breadMakerPrice++;
+		document.getElementById('breadMakerPrice').innerHTML=breadMakerPrice;
 	}
 }
 function bWorkerBuy() {
@@ -383,6 +405,11 @@ function diaMinerGain(){
 	dia++
 	document.getElementById('diaAmount').innerHTML=dia + " diamond(s)";
 }
+function amethGain(){
+	ameth++;
+	document.getElementById('amethystAmount').innerHTML=ameth + " Amethyst";
+	var finishCheck = app + dia + ameth;
+}
 //Upgrades
 function breadInvest(){
 	if(app <= 49){
@@ -436,35 +463,6 @@ function clickUp(){
 		document.getElementById('clickUp').disabled="true";
 		document.getElementById('diaAmount').innerHTML = dia + " diamond(s)";
 		document.getElementById('clickUp').innerHTML="Sold Out"
-	}
-}
-function amethGain(){
-	ameth++;
-	document.getElementById('amethystAmount').innerHTML=ameth + " Amethyst";
-	var finishCheck = app + dia + ameth;
-}
-function x2SpeedUp(){
-	if(bread <= 9){
-		document.getElementById('x2NoBread').innerHTML="You need more Bread!";
-		setInterval(clearNos, 5000);
-	}
-	if(bread >= 10){
-		var breadRemove = 10;
-		do{
-			bread--;
-			breadRemove--;
-		} while(breadRemove >= 1)
-		document.getElementById('breadAmount').innerHTML=bread + " Bread";
-		document.getElementById('multiButton').innerHTML="Cooling Down";
-		setInterval(x2Time, 1000);
-	}
-}
-function x2Time(){
-	cooldownSec--;
-	document.getElementById('x2Countdown').innerHTML=cooldownSec + " second(s) remaining.";
-	var x2SpeedUpvar = timeSpeedUp - 15;
-	if(cooldownSec <= 0){
-		clearInterval(x2Time);
 	}
 }
 //Finish
@@ -553,6 +551,7 @@ function interval(){
 	if(gWorker >= 1){setInterval(gWorkerGain, 5000 - gWorkerTime);}
 	if(diaMiner >= 1){setInterval(diaMinerGain, 10000 - diaMinerTime);}
 	if(amethMiner >= 1){setInterval(amethGain, 15000 - amethMinerTime);}
+	if(breadMaker >= 1){setInterval(, 15000 - amethMinerTime);}
 	clearTimeout(interval);
 }
 //Debugging only
