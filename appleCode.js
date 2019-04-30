@@ -123,8 +123,7 @@ function clearNos(){
 	document.getElementById("appleNoAmethyst").innerHTML=" ";
 	document.getElementById('breadNoAmethyst').innerHTML=" ";
 	document.getElementById('breadUpNoApple').innerHTML=" ";
-	document.getElementById().innerHTML=" ";
-	clearTimeout(clearNos);
+	document.getElementById('bMakerNoBread').innerHTML=" ";
 }
 //Worker Functions
 function workerCheck(){
@@ -279,8 +278,17 @@ function amethMinerBuy(){
 }
 function breadMakerBuy(){
 	if (bread <= breadMakerPrice - 1){
-		document.getElementById().innerHTML="You don't have enough Bread!";
+		document.getElementById('bMakerNoBread').innerHTML="You don't have enough Bread!";
 		setInterval(clearNos, 5000);
+	}
+	if (bread >= breadMakerPrice){
+		breadMaker++;
+		breadMakerCount--;
+		var breadRemove = breadMakerPrice;
+		do{
+			bread--;
+			breadRemove--;
+		} while (breadRemove >= 1)
 	}
 }
 //Get/Buy resources
