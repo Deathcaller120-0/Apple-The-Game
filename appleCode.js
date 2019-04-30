@@ -348,9 +348,6 @@ function amethBuy(){
 	}
 }
 function amethApple(){
-	if(resetAmount <= 1){
-		window.alert('You have achived the true ending. Well done.');
-	}
 	if(ameth <= 0){
 		document.getElementById('appleNoAmethyst').innerHTML="You have no Amethyst!";
 		setTimeout(clearNos, 5000);
