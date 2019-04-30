@@ -655,8 +655,8 @@ function debugReset(){
 		var gWorkerTime = gWorker / time;
 		var diaMinerTime = diaMiner / time;
 		var amethMinerTime = amethMiner / time;
-		do{resetAmount++;}while(resetAmount <= 3)
-		do{resetAmount--;}while(resetAmount >= 4)
+		do{resetAmount++;}while(resetAmount <= -1)
+		do{resetAmount--;}while(resetAmount >= 1)
 		console.log(resetAmount);
 		var cooldownSec = 120;
 		setTimeout(save, 100);
