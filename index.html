@@ -56,33 +56,31 @@
 			<span id="badNoApple" class="text"></span>
 			<br>
     	    <button id="hireButton" onclick="nWorkerBuy()" style="background-color:rgb(120,255,0); color:#000;" class="text">Hire Apple Picker</button>
-			<span class="tooltip text" id="nWorkertest">25 apples for Picker
+			<span class="tooltip text"><span id=nWorkerPrice>25</span> apples for Picker
 				<span class="tooltiptext text">Does not steal apples.</span>
 			</span>
 			<span id="workerAmount" class="text">0 Apple Pickers</span>
 			<span id="normNoApple" class="text"></span>
 			<br>
 	        <button id="goodHireButton" onclick="gWorkerBuy()" style="background-color:rgb(0,190,255); color:#000;" class="text">Hire Good Apple Picker</button>
-			<span class="tooltip text" id="gWorkertest">40 apples for Good Picker
+			<span class="tooltip text"><span id="gWorkerPrice">40</span> apples for Good Picker
 				<span class="tooltiptext text">Gives 2 apples per cycle.</span>
 			</span>
 			<span id="gWorkerAmount" class="text">0 Good Apple Pickers</span>
 				<span id="goodNoApple" class="text"></span>
 			<br>
 			<button id="minerHireButton" onclick="diaMinerHire()" style="background-color:rgb(51, 214, 255);" class="text">Hire Diamond Miner</button>
-    	    <span class="text" id="diaMinertest">10 Diamonds for Diamond Miner</span>
+    	    <span class="text"><span id="diaMinerPrice">10</span> Diamonds for Diamond Miner</span>
 			<span id="minerAmount" class="text">0 Diamond Miners</span>
 			<span id="minerNoDia" class="text"></span>
 			<br>
 			<button id="amethystWorker" style="background-color:rgb(127.5,0,255);" onclick="amethMinerBuy()" class="text">Hire Amethyst Miner</button>
-			<span class="text" id="amethMinertest">10 Amethyst for Amethyst Miner</span>
+			<span class="text" id="amethMinertest"><span id="amethMinerPrice">10</span> Amethyst for Amethyst Miner</span>
 			<span id="amethystMinerAmount" class="text">0 Amethyst Miners</span>
 			<span id="minerNoAmethyst" class="text"></span>
 			<br>
-			<button id="breadMakerButton" style="background-color:rgb(51,26,0);" onclick="breadMakerBuy()" class="text">Hire Bread Maker</button>
-			<span>
-				<span></span>
-			</span>
+			<button id="breadMakerButton" style="background-color:rgb(51,26,0); color:#fff;" onclick="breadMakerBuy()" class="text">Hire Bread Maker</button>
+			<span></span>
 			</b>
 		</div>
 		<div id="upgrades">
@@ -102,12 +100,6 @@
 				<button id="breadUpgrade" class="text" onclick="breadInvest()" style="background-color:#86592d;">Slowly gain Bread</button>
 				<span class="text">50 Apples</span>
 				<span class="text" id="breadUpNoApple"></span>
-			</div>
-			<div>
-				<button id="multiButton" class="text" onclick="x2SpeedUp()" style="background-color:#ff7f01;">2X Multiplier</button>
-				<span class="text">10 Bread</span>
-				<span class="text" id="x2NoBread"></span>
-				<span class="text" id="x2Countdown"></span>
 			</div>
 		</b>
 		</div>
