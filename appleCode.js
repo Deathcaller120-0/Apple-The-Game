@@ -426,7 +426,7 @@ function diaGain(){
 }
 function amethBuy(){
 	if(dia <= 19){
-		document.getElementById('amethNodia').innerHTML="You don't have enough Diamonds!";
+		document.getElementById('amethystNoDia').innerHTML="You don't have enough Diamonds!";
 		setTimeout(clearNos, 5000)
 	}
 	if(dia >= 20){
