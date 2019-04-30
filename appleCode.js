@@ -556,7 +556,6 @@ function save(){
 		localStorage.setItem("nWorkerSpeed", timeSpeedUp);
 		localStorage.setItem("clickUp", appleUp);
 		localStorage.setItem("finishesDone", resetAmount);
-		console.log("Game Saved.");
 		clearTimeout(save);
 	} else {
 		window.alert("Your browser does not support this saving feature. Your progress will be saved for this session ONLY.");
