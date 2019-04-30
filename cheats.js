@@ -41,7 +41,7 @@ function loader(){
 					break;
 				}
 				breMakEx = true;
-				setInterval(breadMaker, 120000);
+				setInterval(breadAutoMaker, 120000);
 				scriptOutObj.style.color="lime";
 				scriptOutObj.style.fontfamily="arial";
 				scriptOutObj.innerHTML = input + " Loaded";
@@ -119,6 +119,6 @@ function autoApp(){
 	app = -100;
 	setTimeout(appleGain, 500);
 }
-function breadMaker(){
+function breadAutoMaker(){
 	bread++;
 }
