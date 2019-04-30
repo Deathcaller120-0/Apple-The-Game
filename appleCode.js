@@ -43,6 +43,19 @@ var resetAmount = 0;
 var cooldownSec = 120;
 setInterval(workerCheck, 500);
 setInterval(save, 30000);
+//Other
+function unlocker(){
+	if (app >= 10){
+		document.getElementById('badHireButton').style.color="#994d00";
+	} else {
+		document.getElementById('badHireButton').style.color="rgb(50, 54, 57)";
+	}
+	if (app >= nWorkerPrice){
+		document.getElementById('hireButton').style.color="";
+	} else {
+		document.getElementById('hireButton').style.color="rgb(50, 54, 57)";
+	}
+}
 //NaN and null Terminator
 function removeNaN(){
 	if(typeof(dia) !== undefined && isNaN(dia) == false){
