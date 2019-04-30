@@ -53,8 +53,10 @@ function unlocker(){
 	}
 	if (app >= 50){
 		document.getElementById('diaButton').style.backgroundColor="#00ffff";
+		document.getElementById('breadUpgrade').style.backgroundColor="#86592d";
 	} else {
 		document.getElementById('diaButton').style.backgroundColor="#323639";
+		document.getElementById('breadUpgrade').style.backgroundColor="#323639";
 	}
 	if (app >= nWorkerPrice){
 		document.getElementById('hireButton').style.backgroundColor ="#78ff00";
@@ -76,6 +78,16 @@ function unlocker(){
 	} else {
 		document.getElementById('amethystButton').style.backgroundColor="#323639";
 	}
+	if (dia >= 30){
+		document.getElementById('workerSpeed').style.backgroundColor="#007fff"
+	} else {
+		document.getElementById('workerSpeed').style.backgroundColor="#323639";
+	}
+	if (dia >= 50){
+		document.getElementById('clickUp').style.backgroundColor="#ffffff";
+	} else {
+		document.getElementById('clickUp').style.backgroundColor="#323639";
+	}
 	if (ameth >= amethMinerPrice){
 		document.getElementById('amethystWorker').style.backgroundColor="#7f00ff";
 	} else {
@@ -85,6 +97,11 @@ function unlocker(){
 		document.getElementById('breadButton').style.backgroundColor="#bf8040";
 	} else {
 		document.getElementById('breadButton').style.backgroundColor="#323639";
+	}
+	if (ameth >= 1){
+		document.getElementById('amethystApple').style.backgroundColor="#ccff33";
+	} else {
+		document.getElementById('amethystApple').style.backgroundColor="#323639";
 	}
 	if (bread >= breadMakerPrice){
 		document.getElementById('breadMakerButton').style.backgroundColor ="#b59a4a";
