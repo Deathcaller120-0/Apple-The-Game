@@ -80,8 +80,8 @@ function loader(){
 //Grab Cheat List
 function list(){
 	var arr = 0;
-	setInterval(a, 5000)
-	function a(){
+	setInterval(listf, 5000)
+	function listf(){
 		if(arr >= cheatList.length){
 			document.getElementById('List').innerHTML = " ";
 			arr++;
