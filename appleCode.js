@@ -500,7 +500,7 @@ function diaMinerGain(){
 	dia++;
 	}
 	dia++
-	document.getElementById('diaAmount').innerHTML=dia + " diamond(s)";
+	document.getElementById('diaAmount').innerHTML=dia + " Diamonds";
 }
 function amethGain(){
 	ameth++;
