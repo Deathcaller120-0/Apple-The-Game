@@ -4,7 +4,7 @@ var msg = [
 	"Lookin for secrets? You wont find any here.",
 	"Cheated apples go rotten faster than normal apples."
 ];
-var msgnum = Math.floor(Math.random()*msg.length);
+var msgnum = Math.floor(Math.random() * 3);
 var msgout = msg[msgnum]
 console.log(msgout);
 }
