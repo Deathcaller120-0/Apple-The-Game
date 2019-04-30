@@ -25,6 +25,7 @@ var gWorkerPrice = 40;
 var gWorkerCount = 20;
 var diaMiner = 0;
 var diaMinerPrice = 10;
+var diaMinerCount = 10;
 var amethMiner = 0;
 var amethMinerPrice = 10;
 var amethMinerCount = 10;
