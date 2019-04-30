@@ -1,11 +1,12 @@
 //Random console msg
 var msg = [
-"You bout to cheat? Or are you lookin for some Devolper stuff?",
-"Lookin for secrets? You wont find any here.",
-"Cheated apples go rotten faster than normal apples."
+	"You bout to cheat? Or are you lookin for some Devolper stuff?",
+	"Lookin for secrets? You wont find any here.",
+	"Cheated apples go rotten faster than normal apples."
 ];
 var msgnum = Math.floor(Math.random()*msg.length);
-console.log(msg[msgnum]);
+var msgout = msg[msgnum]
+console.log(msgout);
 }
 //Global Vars
 var app = 5;
