@@ -224,6 +224,7 @@ function workerCheck(){
 		document.getElementById('breadMakerButton').innerHTML="MAXED OUT";
 		document.getElementById('breadMakerButton').disabled="true";
 	}
+}
 function bWorkerBuy() {
 	if(app <= 9){
 		document.getElementById('badNoApple').innerHTML="How don't You have enough apples!";
