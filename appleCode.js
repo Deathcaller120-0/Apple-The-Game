@@ -46,17 +46,17 @@ setInterval(unlocker, 500);
 setInterval(save, 30000);
 //Other
 function unlocker(){
-	if (app >= 10){
+	if (app >== 10){
 		document.getElementById('badHireButton').style.background-color="#994d00";
 	} else {
 		document.getElementById('badHireButton').style.background-color="#323639";
 	}
-	if (app >= nWorkerPrice){
+	if (app >== nWorkerPrice){
 		document.getElementById('hireButton').style.background-color="#78ff00";
 	} else {
 		document.getElementById('hireButton').style.background-color="#323639";
 	}
-	if (bread >= breadMakerPrice){
+	if (bread >== breadMakerPrice){
 		document.getElementById('breadMakerButton').style.background-color="#b59a4a";
 	} else {
 		document.getElementById('breadMakerButton').style.background-color="#323639";
