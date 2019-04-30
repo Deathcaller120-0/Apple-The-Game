@@ -422,6 +422,10 @@ function amethGain(){
 	document.getElementById('amethystAmount').innerHTML=ameth + " Amethyst";
 	var finishCheck = app + dia + ameth;
 }
+function breadMakerGain(){
+	bread++;
+	document.getElementById('breadAmount').innerHTML=bread + " Bread";
+}
 //Upgrades
 function breadInvest(){
 	if(app <= 49){
@@ -563,7 +567,7 @@ function interval(){
 	if(gWorker >= 1){setInterval(gWorkerGain, 5000 - gWorkerTime);}
 	if(diaMiner >= 1){setInterval(diaMinerGain, 10000 - diaMinerTime);}
 	if(amethMiner >= 1){setInterval(amethGain, 15000 - amethMinerTime);}
-	if(breadMaker >= 1){setInterval(, 15000 - amethMinerTime);}
+	if(breadMaker >= 1){setInterval(breadMakerGain, 15000 - amethMinerTime);}
 	clearTimeout(interval);
 }
 //Debugging only
