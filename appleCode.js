@@ -204,13 +204,6 @@ function workerCheck(){
 	if (nWorker >= 600){
 		document.getElementById('hireButton').disabled="true";
 		document.getElementById('hireButton').innerHTML="MAXED OUT";
-	} else if (nWorkerCount == 0){
-		nWorkerPrice++;
-		nWorkerPrice++;
-		do{
-			nWorkerCount++;
-		} while (nWorkerCount <= 29)
-		document.getElementById('nWorkerPrice').innerHTML=nWorkerPrice;
 	}
 	if (gWorkerPrice == null || gWorkerPrice == NaN || gWorkerPrice == undefined){
 		gWorkerPrice = 40;
@@ -218,47 +211,19 @@ function workerCheck(){
 	if (gWorker >= 600){
 		document.getElementById('goodHireButton').disabled="true";
 		document.getElementById('goodHireButton').innerHTML="MAXED OUT";
-	} else if (gWorkerCount == 0){
-		gWorkerPrice++;
-		gWorkerPrice++;
-		do{
-			gWorkerCount++;
-		} while (gWorkerCount <= 39)
-		document.getElementById('gWorkerPrice').innerHTML=gWorkerPrice;
 	}
 	if (diaMiner >= 300){
 		document.getElementById('minerHireButton').disabled="true";
 		document.getElementById('minerHireButton').innerHTML="MAXED OUT";
-	} else if (diaMinerCount == 0){
-		diaMinerPrice++;
-		diaMinerPrice++;
-		do {
-			diaMinerCount++;
-		} while (diaMinerCount <= 9)
-		document.getElementById('diaMinerPrice').innerHTML=diaMinerPrice;
 	}
 	if (amethMiner >= 100){
 		document.getElementById('amethystWorker').innerHTML="MAXED OUT";
 		document.getElementById('amethystWorker').disabled="true";
-	} else if (amethMinerCount == 0){
-		amethMinerPrice++;
-		amethMinerPrice++;
-		do {
-			amethMinerCount++;
-		} while (amethMinerCount <= 9)
-		document.getElementById('amethMinerPrice').innerHTML=amethMinerPrice;
 	}
 	if (breadMaker >= 75){
 		document.getElementById('breadMakerButton').innerHTML="MAXED OUT";
 		document.getElementById('breadMakerButton').disabled="true";
-	} else if (breadMakerCount == 0){
-		breadMakerPrice++;
-		do {
-			breadMakerCount++;
-		} while (breadMakerCount <= 4)
-		document.getElementById('breadMakerPrice').innerHTML=breadMakerPrice;
 	}
-}
 function bWorkerBuy() {
 	if(app <= 9){
 		document.getElementById('badNoApple').innerHTML="How don't You have enough apples!";
@@ -288,6 +253,14 @@ function nWorkerBuy(){
 	if(app >= nWorkerPrice){
 		nWorker++;
 		nWorkerCount--;
+		if (nWorkerCount == 0){
+			nWorkerPrice++;
+			nWorkerPrice++;
+			do{
+				nWorkerCount++;
+			} while (nWorkerCount <= 29)
+			document.getElementById('nWorkerPrice').innerHTML=nWorkerPrice;
+		}
 		document.getElementById('workerAmount').innerHTML=nWorker + " Apple Pickers"
 		var appleRemove = nWorkerPrice;
 		do{
@@ -307,6 +280,14 @@ function gWorkerBuy(){
 	if(app >= gWorkerPrice){
 		gWorker++;
 		gWorkerCount--;
+		if (gWorkerCount == 0){
+			gWorkerPrice++;
+			gWorkerPrice++;
+			do{
+				gWorkerCount++;
+			} while (gWorkerCount <= 39)
+			document.getElementById('gWorkerPrice').innerHTML=gWorkerPrice;
+		}
 		document.getElementById('gWorkerAmount').innerHTML= gWorker + " Good Apple Pickers";
 		var appleRemove = gWorkerPrice;
 		do{
@@ -326,6 +307,14 @@ function diaMinerHire(){
 	if (dia >= diaMinerPrice){
 		diaMiner++;
 		diaMinerCount--;
+		if (diaMinerCount == 0){
+			diaMinerPrice++;
+			diaMinerPrice++;
+			do {
+				diaMinerCount++;
+			} while (diaMinerCount <= 9)
+			document.getElementById('diaMinerPrice').innerHTML=diaMinerPrice;
+		}
 		var diamondRemove = diaMinerPrice;
 		do {
 			dia--;
@@ -344,6 +333,14 @@ function amethMinerBuy(){
 	if(ameth >= amethMinerPrice){
 		amethMiner++;
 		amethMinerCount--;
+		if (amethMinerCount == 0){
+			amethMinerPrice++;
+			amethMinerPrice++;
+			do {
+				amethMinerCount++;
+			} while (amethMinerCount <= 9)
+			document.getElementById('amethMinerPrice').innerHTML=amethMinerPrice;
+		}
 		var amethRemove = amethMinerPrice;
 		do{
 			ameth--;
@@ -362,6 +359,13 @@ function breadMakerBuy(){
 	if (bread >= breadMakerPrice){
 		breadMaker++;
 		breadMakerCount--;
+		if (breadMakerCount == 0){
+			breadMakerPrice++;
+			do {
+				breadMakerCount++;
+			} while (breadMakerCount <= 4)
+			document.getElementById('breadMakerPrice').innerHTML=breadMakerPrice;
+		}
 		var breadRemove = breadMakerPrice;
 		do{
 			bread--;
