@@ -1,13 +1,11 @@
 //Random console msg
-var randomMessage = Math.floor(Math.random() * 3);
-if (randomMessage == 0){
-	console.log('You bout to cheat? Or are you lookin for some Devolper stuff?');
-}
-if (randomMessage == 1){
-	console.log('Lookin for secrets? You wont find any here.');
-}
-if (randomMessage == 2){
-	console.log('Cheated apples go rotten faster than normal apples.');
+var msg = [
+"You bout to cheat? Or are you lookin for some Devolper stuff?",
+"Lookin for secrets? You wont find any here.",
+"Cheated apples go rotten faster than normal apples."
+];
+var msgnum = Math.floor(Math.random()*msg.length);
+console.log(msg[msgnum]);
 }
 //Global Vars
 var app = 5;
