@@ -123,7 +123,7 @@ function clearNos(){
 	document.getElementById("appleNoAmethyst").innerHTML=" ";
 	document.getElementById('breadNoAmethyst').innerHTML=" ";
 	document.getElementById('breadUpNoApple').innerHTML=" ";
-	document.getElementById('x2NoBread').innerHTML=" ";
+	document.getElementById().innerHTML=" ";
 	clearTimeout(clearNos);
 }
 //Worker Functions
@@ -209,7 +209,8 @@ function nWorkerBuy(){
 		setTimeout(clearNos, 5000);
 	}
 	if(app >= nWorkerPrice){
-		nWorker++
+		nWorker++;
+		nWorkerCount--;
 		document.getElementById('workerAmount').innerHTML=nWorker + " Apple Pickers"
 		var appleRemove = nWorkerPrice;
 		do{
@@ -228,6 +229,7 @@ function gWorkerBuy(){
 	}
 	if(app >= gWorkerPrice){
 		gWorker++;
+		gWorkerCount--;
 		document.getElementById('gWorkerAmount').innerHTML= gWorker + " Good Apple Pickers";
 		var appleRemove = gWorkerPrice;
 		do{
@@ -246,6 +248,7 @@ function diaMinerHire(){
 	}
 	if (dia >= diaMinerPrice){
 		diaMiner++;
+		diaMinerCount--;
 		var diamondRemove = diaMinerPrice;
 		do {
 			dia--;
@@ -263,6 +266,7 @@ function amethMinerBuy(){
 	}
 	if(ameth >= amethMinerPrice){
 		amethMiner++;
+		amethMinerCount--;
 		var amethRemove = amethMinerPrice;
 		do{
 			ameth--;
@@ -274,7 +278,10 @@ function amethMinerBuy(){
 	}
 }
 function breadMakerBuy(){
-	
+	if (bread <= breadMakerPrice - 1){
+		document.getElementById().innerHTML="You don't have enough Bread!";
+		setInterval(clearNos, 5000);
+	}
 }
 //Get/Buy resources
 function appleGain(){
