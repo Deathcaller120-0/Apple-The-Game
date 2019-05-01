@@ -475,7 +475,7 @@ function amethApple(){
 			app++;
 			appleAdd--;
 		} while (appleAdd >= 1)
-		document.getElementById('amethAmount').innerHTML=ameth + " Amethyst";
+		document.getElementById('amethystAmount').innerHTML=ameth + " Amethyst";
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 	}
 }
