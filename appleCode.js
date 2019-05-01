@@ -491,7 +491,8 @@ function breadBuy(){
 			ameth--;
 			amethRemove--;
 		} while(amethRemove >= 1)
-		document.getElementById('breadAmount').innerHTML=bread + " bread";
+		document.getElementById('breadAmount').innerHTML=bread + " Bread";
+		document.getElementById('amethAmount').innerHTML=ameth + " Amethyst";
 	}
 }
 //Worker gather resources
