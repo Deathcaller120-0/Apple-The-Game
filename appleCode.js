@@ -642,6 +642,7 @@ if(typeof(Storage) !==undefined){
 	gWorker = localStorage.getItem("gWorkerCount");
 	diaMiner = localStorage.getItem("diaMinerCount");
 	amethMiner = localStorage.getItem("amethMinerCount");
+	breadMaker = localStorage.getItem("breadBakers");
 	timeSpeedUp = localStorage.getItem("nWorkerSpeed");		
 	appleUp = localStorage.getItem("clickUp");
 	resetAmount = localStorage.getItem("finishCount");
@@ -661,6 +662,7 @@ function save(){
 		localStorage.setItem("gWorkerCount", gWorker);
 		localStorage.setItem("diaMinerCount", diaMiner);
 		localStorage.setItem("amethMinerCount", amethMiner);
+		localStorage.setItem("breadBakers", breadMaker);
 		localStorage.setItem("nWorkerSpeed", timeSpeedUp);
 		localStorage.setItem("clickUp", appleUp);
 		localStorage.setItem("finishesDone", resetAmount);
