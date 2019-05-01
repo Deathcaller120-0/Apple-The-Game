@@ -558,7 +558,7 @@ function breadInvestGain(){
 }
 function workerSpeedUp(){
 	if (dia <= 29){
-	document.getElementById('speedNoDia').innerHTML="Not Enough Diamonds!.";
+	document.getElementById('speedNoDia').innerHTML="You don't have enough Diamonds!";
 	setTimeout(clearNos, 5000);
 	}
 	if (dia >= 30){
