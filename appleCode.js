@@ -8,8 +8,6 @@ var msgnum = Math.floor(Math.random() * 3);
 var msgout = msg[msgnum]
 console.log(msgout);
 //Global Vars
-var version = "Version 1.1";
-document.getElementById('versionNum').innerHTML=version;
 var app = 5;
 var chk = app + 10;
 var dia = 0;
