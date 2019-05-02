@@ -673,6 +673,12 @@ function save(){
 }
 //Makes the Workers do their job after load
 function interval(){
+	var bWorkerTime = bWorker / time;
+	var nWorkerTime = nWorker / time;
+	var gWorkerTime = gWorker / time;
+	var diaMinerTime = diaMiner / time;
+	var amethMinerTime = amethMiner / time;
+	var breadMakerTime = breadMaker / time;
 	if(nWorker >= 1){setInterval(nWorkerGain, 5000 - nWorkerTime);}
 	if(gWorker >= 1){setInterval(gWorkerGain, 5000 - gWorkerTime);}
 	if(diaMiner >= 1){setInterval(diaMinerGain, 10000 - diaMinerTime);}
