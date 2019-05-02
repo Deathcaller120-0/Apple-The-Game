@@ -8,7 +8,7 @@ var msgnum = Math.floor(Math.random() * 3);
 var msgout = msg[msgnum]
 console.log(msgout);
 //Global Vars
-var version = "Version 1.0";
+var version = "Version 1.1";
 document.getElementById('versionNum').innerHTML=version;
 var app = 5;
 var chk = app + 10;
@@ -194,35 +194,35 @@ function clearNos(){
 }
 //Worker Functions
 function workerCheck(){
-	if (bWorker >= 600){
+	if (bWorker >= 500){
 		document.getElementById('badHireButton').disabled="true";
 		document.getElementById('badHireButton').innerHTML="MAXED OUT";
 	}
 	if (nWorkerPrice == null || nWorkerPrice == NaN || nWorkerPrice == undefined){
 		nWorkerPrice = 25;
 	}
-	if (nWorker >= 600){
+	if (nWorker >= 500){
 		document.getElementById('hireButton').disabled="true";
 		document.getElementById('hireButton').innerHTML="MAXED OUT";
 		if (nWorker >= 601){
 			do {
 				nWorker--;
-			} while (nWorker >= 601)
+			} while (nWorker >= 501)
 		}
 	}
 	if (gWorkerPrice == null || gWorkerPrice == NaN || gWorkerPrice == undefined){
 		gWorkerPrice = 40;
 	}
-	if (gWorker >= 600){
+	if (gWorker >= 500){
 		document.getElementById('goodHireButton').disabled="true";
 		document.getElementById('goodHireButton').innerHTML="MAXED OUT";
 		if (gWorker >= 601){
 			do {
 				gWorker--;
-			} while (gWorker >= 601)
+			} while (gWorker >= 501)
 		}
 	}
-	if (diaMiner >= 300){
+	if (diaMiner >= 200){
 		document.getElementById('minerHireButton').disabled="true";
 		document.getElementById('minerHireButton').innerHTML="MAXED OUT";
 		if (diaMiner >= 301){
