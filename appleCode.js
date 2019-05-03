@@ -5,7 +5,7 @@ var msg = [
 	"Cheated apples go rotten faster than normal apples."
 ];
 var msgnum = Math.floor(Math.random() * 3);
-var msgout = msg[msgnum]
+var msgout = msg[msgnum];
 console.log(msgout);
 //Global Vars
 var app = 5;
