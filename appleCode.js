@@ -772,11 +772,16 @@ function debugReset(){
 		do{resetAmount++;}while(resetAmount <= -1)
 		do{resetAmount--;}while(resetAmount >= 1)
 		console.log(resetAmount);
-		nWorkerPrice = "haha";
-		gWorkerPrice = "lol";
-		diaMinerPrice = undefined;
-		amethMinerPrice = "this is Not a Number";
-		breadMakerPrice = "AHHHHH";
+		nWorkerPrice = 25;
+		gWorkerPrice = 40;
+		diaMinerPrice = 10;
+		amethMinerPrice = 10;
+		breadMakerPrice = 5;
+		nWorkerCount = 30;
+		gWorkerCount = 20;
+		diaMinerCount = 10;
+		amethMinerCount = 10;
+		breadMakerCount = 5;
 		var cooldownSec = 120;
 		setTimeout(removeNaN, 10)
 		setTimeout(save, 100);
