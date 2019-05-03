@@ -683,7 +683,7 @@ if(typeof(Storage) !==undefined){
 	setTimeout(interval, 100);
 	setTimeout(removeNaN, 10);
 } else {
-	window.alert("Failed to load save");
+	window.alert("Failed to load save, Does your browser support this saving feature.");
 }
 //Save
 function save(){
