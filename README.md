@@ -7,9 +7,13 @@ This is just a dumb starter project of mine.
 3) Finish
 
 #Features to be Added:
--Payment of Pickers/Miners
+-None
 
-#1.3.2 Changlog:
+#1.3.3 Changelog:
+-Added Reset Button
+-Added Payment
+
+#1.3.2 Changelog:
 -Fixed a bug that would make the game Unplayable.
 -Removal of several functions that are Unused/Usless.
 -Fixed many other bugs.
