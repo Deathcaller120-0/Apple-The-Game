@@ -1,5 +1,5 @@
 # Apple: The Game
-This is just a dumb starter project of mine.
+This is just a dumb starter project of mine that is far from finished.
 
 # How to play:
 1) Click the big red button. (Or Press spacebar)
