@@ -9,7 +9,6 @@ var msgout = msg[msgnum]
 console.log(msgout);
 //Global Vars
 var app = 5;
-var chk = app + 10;
 var dia = 0;
 var ameth = 0;
 var bread = 0;
@@ -644,6 +643,11 @@ if(typeof(Storage) !==undefined){
 	diaMinerPrice = localStorage.getItem("dMinePrice");
 	amethMinerPrice = localStorage.getItem("aMinePrice");
 	breadMakerPrice = localStorage.getItem("bMakerPrice");
+	nWorkerCount = localStorage.getItem("nWorkCount");
+	gWorkerCOunt = localStorage.getItem("gWorkCount");
+	diaMinerCount = localStorage.getItem("dMineCount");
+	amethMinerCount = localStorage.getItem("aMineCount");
+	breadMakerCOunt = localStorage.getItem("bMakeCount");
 	console.log("Save Loaded Successfully.");
 	setTimeout(interval, 100);
 	setTimeout(removeNaN, 10);
@@ -669,6 +673,11 @@ function save(){
 		localStorage.setItem("dMinePrice", diaMinerPrice);
 		localStorage.setItem("aMinePrice", amethMinerPrice);
 		localStorage.setItem("bMakerPrice", breadMakerPrice);
+		localStorage.setItem("nWorkCount", nWorkerCount);
+		localStorage.setItem("gWorkCount", gWorkerCount);
+		localStorage.setItem("dMineCount", diaMinerCount);
+		localStorage.setItem("aMineCount", amethMinerCount);
+		localStorage.setItem("bMakeCount", breadMakerCount);
 		clearTimeout(save);
 	} else {
 		window.alert("Your browser does not support this saving feature. Your progress will be saved for this session ONLY.");
