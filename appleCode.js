@@ -639,6 +639,11 @@ if(typeof(Storage) !==undefined){
 	timeSpeedUp = localStorage.getItem("nWorkerSpeed");		
 	appleUp = localStorage.getItem("clickUp");
 	resetAmount = localStorage.getItem("finishCount");
+	nWorkerPrice = localStorage.getItem("nWorkPrice");
+	gWorkerPrice = localStorage.getItem("gWorkPrice");
+	diaMinerPrice = localStorage.getItem("dMinePrice");
+	amethMinerPrice = localStorage.getItem("aMinePrice");
+	breadMakerPrice = localStorage.getItem("bMakerPrice");
 	console.log("Save Loaded Successfully.");
 	setTimeout(interval, 100);
 	setTimeout(removeNaN, 10);
@@ -659,6 +664,11 @@ function save(){
 		localStorage.setItem("nWorkerSpeed", timeSpeedUp);
 		localStorage.setItem("clickUp", appleUp);
 		localStorage.setItem("finishesDone", resetAmount);
+		localStorage.setItem("nWorkPrice", nWorkerPrice);
+		localStorage.setItem("gWorkPrice", gWorkerPrice);
+		localStorage.setItem("dMinePrice", diaMinerPrice);
+		localStorage.setItem("aMinePrice", amethMinerPrice);
+		localStorage.setItem("bMakerPrice", breadMakerPrice);
 		clearTimeout(save);
 	} else {
 		window.alert("Your browser does not support this saving feature. Your progress will be saved for this session ONLY.");
