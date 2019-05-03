@@ -401,12 +401,6 @@ function breadMakerBuy(){
 }
 //Get/Buy resources
 function appleGain(){
-	if (app > chk){
-		window.alert("Do Not Cheat.");
-		do {
-			app--;
-		} while (app + 10 > chk)
-	}
 	if (appleUp == true){
 		app++;
 		app++;
@@ -418,7 +412,6 @@ function appleGain(){
 		document.getElementById('appleAchive').innerHTML="Wow, you actually got to 1,000,000 apples. Or did you leave it going over night?";
 	}
 	var finishCheck = app + dia + ameth;
-	var chk = app + 10;
 }
 //When spacebar is pressed, app++
 document.addEventListener('keyup', function (event) {
@@ -524,7 +517,7 @@ function diaMinerGain(){
 	dia++;
 	}
 	dia++
-	document.getElementById('diaAmount').innerHTML=dia + " Diamonds";
+	document.getElementById('diaAmount').innerHTML=dia + " Diamond(s)";
 }
 function amethGain(){
 	ameth++;
