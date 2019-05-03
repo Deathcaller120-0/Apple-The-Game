@@ -731,7 +731,7 @@ function interval(){
 }
 //Debugging only
 function debugReset(){
-	var pro = prompt("Are you sure you want to reset?");
+	var pro = prompt("Are you sure you want to reset? (y/n)");
 	if (pro == "y" || pro == "Y"){
 		do{app--;}while(app >= 6)
 		do{app++;}while(app <= 4)
