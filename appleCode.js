@@ -700,6 +700,8 @@ function interval(){
 }
 //Debugging only
 function debugReset(){
+	var pro = prompt("Are you sure you want to reset?");
+	if (pro == "y" || pro == "Y"){
 		do{app--;}while(app >= 6)
 		do{app++;}while(app <= 4)
 		console.log(app);
@@ -741,4 +743,7 @@ function debugReset(){
 		console.log(resetAmount);
 		var cooldownSec = 120;
 		setTimeout(save, 100);
+	} else {
+		return;
+	}
 }
