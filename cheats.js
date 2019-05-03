@@ -53,11 +53,9 @@ function loader(){
 				scriptOutObj.innerHTML = "NaN values removed succesfully";
 				break;
 			case "debugReset":
-				var pro = prompt("This is for Debugging ONLY. Continue? y/n");
-				if(pro == "y" || pro == "Y"){
-					setTimeout(debugReset, 100);
-					scriptOutObj.innerHTML="Reset Sucessful";
-					break;
+				setTimeout(debugReset, 100);
+				scriptOutObj.innerHTML="Reset Sucessful";
+				break;
 				}
 				break;
 			case "list":
