@@ -785,7 +785,7 @@ function debugReset(){
 		var cooldownSec = 120;
 		setTimeout(removeNaN, 10)
 		setTimeout(save, 100);
-	} else {
+	} else { 
 		return;
 	}
 }
