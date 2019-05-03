@@ -195,7 +195,7 @@ function workerCheck(){
 		document.getElementById('badHireButton').disabled="true";
 		document.getElementById('badHireButton').innerHTML="MAXED OUT";
 	}
-	if (nWorkerPrice == null || nWorkerPrice == NaN || nWorkerPrice == undefined){
+	if (nWorkerPrice == null || nWorkerPrice == NaN || nWorkerPrice == undefined || typeof(nWorkerPrice) == " "){
 		nWorkerPrice = 25;
 	}
 	if (nWorker >= 500){
@@ -207,7 +207,7 @@ function workerCheck(){
 			} while (nWorker >= 501)
 		}
 	}
-	if (gWorkerPrice == null || gWorkerPrice == NaN || gWorkerPrice == undefined){
+	if (gWorkerPrice == null || gWorkerPrice == NaN || gWorkerPrice == undefined || typeof(gWorkerPrice) == " "){
 		gWorkerPrice = 40;
 	}
 	if (gWorker >= 500){
