@@ -56,8 +56,6 @@ function loader(){
 				setTimeout(debugReset, 100);
 				scriptOutObj.innerHTML="Reset Sucessful";
 				break;
-				}
-				break;
 			case "list":
 				setTimeout(list, 100);
 				scriptOutObj.style.color="lime";
