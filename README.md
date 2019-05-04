@@ -11,4 +11,4 @@ This is just a dumb starter project of mine that is far from finished.
 - If you want to see a Feature added, email me at: deathcaller120@gmail.com
 
 # News:
-- Creatd Wiki! The update logs have been moved to there.
+- Created the Apple: The Game Wiki! The update logs have been moved to there.
