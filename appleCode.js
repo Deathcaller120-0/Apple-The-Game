@@ -223,6 +223,9 @@ function workerCheck(){
 			} while (gWorker >= 501)
 		}
 	}
+	if (diaMinerPrice == undefined || diaMinerPrice == null || diaMinerPrice == NaN){
+		diaMinerPrice = 10;
+	}
 	if (diaMiner >= 200){
 		document.getElementById('minerHireButton').disabled="true";
 		document.getElementById('minerHireButton').innerHTML="MAXED OUT";
@@ -232,6 +235,9 @@ function workerCheck(){
 			} while (diaMiner >= 301)
 		}
 	}
+	if (amethMinerPrice == undefined || amethMinerPrice == null || amethMinerPrice == NaN){
+		amethMinerPrice = 10;
+	}
 	if (amethMiner >= 100){
 		document.getElementById('amethystWorker').innerHTML="MAXED OUT";
 		document.getElementById('amethystWorker').disabled="true";
@@ -240,6 +246,9 @@ function workerCheck(){
 				amethMiner--;
 			} while (amethMiner >= 101)
 		}
+	}
+	if (breadMakerPrice == undefined || breadMakerPrice == null || breadMakerPrice == NaN){
+		breadMakerPrice = 5;
 	}
 	if (breadMaker >= 75){
 		document.getElementById('breadMakerButton').innerHTML="MAXED OUT";
