@@ -5,7 +5,8 @@ var cheatList = [
 	"breadMaker",
 	"morseRoads",
 	"removeNaN",
-	"phil"
+	"phil",
+	"waldo"
 ]
 var koEx = false;
 var autoAppEx = false;
