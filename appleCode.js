@@ -272,6 +272,16 @@ function bWorkerBuy() {
 		setInterval(bWorkerGain, 5000 - bWorkerTime);
 	}
 }
+function bWorkerSell(){
+	if (bWorker >= 1){
+		bWorker--;
+		var appadd = 8;
+		do {
+			app++;
+			appadd--;
+		} while (appadd >= 1)
+	} else {return;}
+}
 function nWorkerBuy(){
 	if(app <= nWorkerPrice - 1){
 		document.getElementById('normNoApple').innerHTML ="You don't have enough Apples!";
