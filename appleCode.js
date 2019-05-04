@@ -325,7 +325,7 @@ function nWorkerBuy(){
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 		document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
 		setInterval(nWorkerGain, 5000 - nWorkerTime);
-		setInterval(nWorkerPay, 10000 - nWorkerTime);
+		setInterval(nWorkerPay, 10000);
 	}
 }
 function nWorkerPay(){
@@ -372,7 +372,7 @@ function gWorkerBuy(){
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 		document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
 		setInterval(gWorkerGain, 5000 - gWorkerTime);
-		setInterval(gWorkerPay, 9000 - gWorkerTime);
+		setInterval(gWorkerPay, 9000);
 	}
 }
 function gWorkerPay(){
@@ -416,7 +416,7 @@ function diaMinerHire(){
 			diamondRemove--;
 		} while (diamondRemove >= 1)
 		setInterval(diaMinerGain, 10000 - diaMinerTime);
-		setInterval(diaMinerPay, 15000 - diaMinerTime);
+		setInterval(diaMinerPay, 15000);
 		document.getElementById('minerAmount').innerHTML= diaMiner + " Miner(s)";
 		document.getElementById('diaAmount').innerHTML= dia + " Diamond(s)";
 	}
@@ -462,7 +462,7 @@ function amethMinerBuy(){
 		document.getElementById('amethystAmount').innerHTML=ameth + " Amethyst";
 		document.getElementById('amethystMinerAmount').innerHTML=amethMiner + " Amethyst Miner(s)";
 		setInterval(amethGain, 15000 - amethMinerTime);
-		setInterval(amethMinerPay, 20000 - amethMinerTime)
+		setInterval(amethMinerPay, 20000)
 	}
 }
 function aMinerSell(){
