@@ -470,6 +470,8 @@ function appleGain(){
 document.addEventListener('keydown', function(event) {
 	if (event.keyCode == 32) {
 		setTimeout(appleGain, 10);
+	} else if (event.keyCode == 13){
+		app--;
 	} else {
 		return;
 	}
