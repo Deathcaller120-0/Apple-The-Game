@@ -152,6 +152,9 @@ function removeNaN(){
 	}
 	if(typeof(breadMaker) !== undefined && isNaN(breadMaker) == false){
 		document.getElementById('breadMakerAmount').innerHTML = breadMaker + " Bread Baker(s)";
+	} else {
+		breadMakers = 0;
+		document.getElementById('breadMakerAmount').innerHTML = breadMaker + " Bread Baker(s)";
 	}
 	if(typeof(timeSpeedUp) !== undefined && timeSpeedUp == 50){
 		document.getElementById('workerSpeed').innerHTML="Sold Out";
