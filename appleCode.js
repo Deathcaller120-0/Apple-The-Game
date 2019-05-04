@@ -108,7 +108,7 @@ function unlocker(){
 }
 //NaN and null Terminator
 function removeNaN(){
-	if(typeof(dia) !== undefined && isNaN(dia) == false){
+	if(typeof(dia) !== undefined && isNaN(dia) == false && dia !== null){
 		document.getElementById('diaAmount').innerHTML=dia +" Diamond(s)"
 	} else {
 		dia = 0;
