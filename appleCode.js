@@ -150,7 +150,7 @@ function removeNaN(){
 		amethMiner = 0;
 		document.getElementById('amethystMinerAmount').innerHTML=amethMiner + " Amethyst Miner(s)";
 	}
-	if(typeof(breadMaker) !== undefined && isNaN(breadMaker) == false){
+	if(typeof(breadMaker) !== undefined && isNaN(breadMaker) == false && breadMaker !== null){
 		document.getElementById('breadMakerAmount').innerHTML = breadMaker + " Bread Baker(s)";
 	} else {
 		breadMaker = 0;
