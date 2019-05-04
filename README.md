@@ -13,7 +13,7 @@ This is just a dumb starter project of mine that is far from finished.
 - Game Performance Increased
 - Added Fire Button for Bad Apple Pickers
 - Added 2 New Cheats
-- Removed Large lines covering background Image
+- Removed Large lines covering the Background Image
 
 # 1.3.3 Changelog:
 - Added Reset Button
