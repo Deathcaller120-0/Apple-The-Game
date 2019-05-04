@@ -298,6 +298,9 @@ function bWorkerSell(){
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 		document.getElementById('titleApples').innerHTML=app + " Apples Collected | Apple: The Game!";
 		document.getElementById('badWorkerAmount').innerHTML=bWorker + " Bad Apple Pickers";
+		if (bWorker == 0){
+			clearInterval(bWorkerGain);
+		}
 	}
 }
 function nWorkerBuy(){
@@ -345,6 +348,10 @@ function nWorkerSell(){
 		document.getElementById('workerAmount').innerHTML=nWorker + " Apple Pickers";
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 		document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
+		if (nWorker == 0){
+			clearInterval(nWorkerGain);
+			clearInterval(nWorkerPay);
+		}
 	}
 }
 function gWorkerBuy(){
@@ -392,6 +399,10 @@ function gWorkerSell(){
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 		document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
 		document.getElementById('gWorkerAmount').innerHTML= gWorker + " Good Apple Pickers";
+		if (gWorker == 0){
+			clearInterval(gWorkerPay);
+			clearInterval(gWorkerGain);
+		}
 	}
 }
 function diaMinerHire(){
@@ -423,7 +434,6 @@ function diaMinerHire(){
 }
 function diaMinerPay(){
 	dia--;
-	dia--;
 	document.getElementById('diaAmount').innerHTML= dia + " Diamond(s)";
 }
 function dMinerSell(){
@@ -436,6 +446,10 @@ function dMinerSell(){
 		} while (diaadd >= 1)
 		document.getElementById('minerAmount').innerHTML= diaMiner + " Miner(s)";
 		document.getElementById('diaAmount').innerHTML= dia + " Diamond(s)";
+		if (diaMiner == 0){
+			clearInterval(diaMinerGain);
+			clearInterval(diaMinerPay);
+		}
 	}
 }
 function amethMinerBuy(){
@@ -475,10 +489,13 @@ function aMinerSell(){
 		} while (amethadd >= 1)
 		document.getElementById('amethystAmount').innerHTML=ameth + " Amethyst";
 		document.getElementById('amethystMinerAmount').innerHTML=amethMiner + " Amethyst Miner(s)";
+		if (amethMiner == 0){
+			clearInterval(amethGain);
+			clearInterval(amethMinerPay);
+		}
 	}
 }
 function amethMinerPay(){
-	ameth--;
 	ameth--;
 	document.getElementById('amethystAmount').innerHTML=ameth + " Amethyst";
 }
@@ -508,7 +525,6 @@ function breadMakerBuy(){
 }
 function breadMakerPay(){
 	bread--;
-	bread--;
 	document.getElementById('breadAmount').innerHTML=bread + " Bread";
 }
 function bMakerSell(){
@@ -521,6 +537,10 @@ function bMakerSell(){
 		} while (amethadd >= 1)
 		document.getElementById('breadAmount').innerHTML=bread + " Bread";
 		document.getElementById('breadMakerAmount').innerHTML=breadMaker + " Bread Bakers";
+		if (breadMaker == 0){
+			clearInterval(breadMakerGain);
+			clearInterval(breadMakerPay);
+		}
 	}
 }
 //Get/Buy resources
