@@ -108,7 +108,7 @@ function unlocker(){
 }
 //NaN and null Terminator
 function removeNaN(){
-	if(typeof(dia) !== undefined && isNaN(dia) == false && dia !== null){
+	if(typeof(dia) !== undefined && isNaN(dia) == false){
 		document.getElementById('diaAmount').innerHTML=dia +" Diamond(s)"
 	} else {
 		dia = 0;
@@ -150,7 +150,7 @@ function removeNaN(){
 		amethMiner = 0;
 		document.getElementById('amethystMinerAmount').innerHTML=amethMiner + " Amethyst Miner(s)";
 	}
-	if(typeof(breadMaker) !== undefined && isNaN(breadMaker) == false && breadMaker !== null){
+	if(typeof(breadMaker) !== undefined && isNaN(breadMaker) == false){
 		document.getElementById('breadMakerAmount').innerHTML = breadMaker + " Bread Baker(s)";
 	} else {
 		breadMaker = 0;
