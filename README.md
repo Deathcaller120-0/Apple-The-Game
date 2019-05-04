@@ -21,5 +21,5 @@ This is just a dumb starter project of mine that is far from finished.
 
 # 1.3.2 Changelog:
 - Fixed a bug that would make the game Unplayable.
-- Removal of several functions that are Unused/Usless.
+- Removal of several functions that are Unused/Useless.
 - Fixed many other bugs.
