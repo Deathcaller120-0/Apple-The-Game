@@ -8,7 +8,7 @@ This is just a dumb starter project of mine that is far from finished.
 
 # Features to be Added:
 - None so far
-- If you want to see a Feature added, email me at: deathcaller120@gmail.com.
+- If you want to see a Feature added, email me at: deathcaller120@gmail.com
 
 # 1.3.4 Changelog:
 - Game Performance Increased
