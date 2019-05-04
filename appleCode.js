@@ -150,6 +150,9 @@ function removeNaN(){
 		amethMiner = 0;
 		document.getElementById('amethystMinerAmount').innerHTML=amethMiner + " Amethyst Miner(s)";
 	}
+	if(typeof(breadMaker) !== undefined && isNaN(breadBaker) == false){
+		document.getElementById('breadMakerAmount').innerHTML = breadMaker + " Bread Baker(s)";
+	}
 	if(typeof(timeSpeedUp) !== undefined && timeSpeedUp == 50){
 		document.getElementById('workerSpeed').innerHTML="Sold Out";
 		document.getElementById('workerSpeed').disabled="disabled";
@@ -165,9 +168,7 @@ function removeNaN(){
 		appleUp = false;
 	}
 	if(resetAmount == null || resetAmount == undefined){
-		console.log(resetAmount);
 		resetAmount = 0;
-		console.log(resetAmount);
 	} else {
 		console.log(resetAmount);
 	}
@@ -270,7 +271,7 @@ function bWorkerBuy() {
 }
 function nWorkerBuy(){
 	if(app <= nWorkerPrice - 1){
-		document.getElementById('normNoApple').innerHTML ="You don't have enough apples!";
+		document.getElementById('normNoApple').innerHTML ="You don't have enough Apples!";
 		setTimeout(clearNos, 5000);
 	}
 	if(app >= nWorkerPrice){
@@ -444,15 +445,13 @@ function appleGain(){
 	var finishCheck = app + dia + ameth;
 }
 //When spacebar is pressed, app++
-document.addEventListener('keyup', function (event) {
-	if (event.defaultPrevented) {
+document.addEventListener('keydown', function(event) {
+	if (event.keyCode == 32) {
+		setTimeout(appleGain, 10);
+	} else {
 		return;
 	}
-	var key = event.key || event.keyCode;
-	if (key === 'Space' || key === ' ' || key === 32) {
-		setTimeout(appleGain, 10);
-	}
-});
+}, true);
 function diaGain(){
 	if (app <= 49){
 		document.getElementById('diaNoApple').innerHTML="You don't have enough Apples!";
