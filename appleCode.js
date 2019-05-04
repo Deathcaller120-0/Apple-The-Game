@@ -289,6 +289,9 @@ function bWorkerSell(){
 			app++;
 			appadd--;
 		} while (appadd >= 1)
+		document.getElementById('appleAmount').innerHTML=app + " Apples";
+		document.getElementById('titleApples').innerHTML=app + " Apples Collected | Apple: The Game!";
+		document.getElementById('badWorkerAmount').innerHTML=bWorker + " Bad Apple Pickers";
 	}
 }
 function nWorkerBuy(){
@@ -307,7 +310,7 @@ function nWorkerBuy(){
 			} while (nWorkerCount <= 29)
 			document.getElementById('nWorkerPrice').innerHTML=nWorkerPrice;
 		}
-		document.getElementById('workerAmount').innerHTML=nWorker + " Apple Pickers"
+		document.getElementById('workerAmount').innerHTML=nWorker + " Apple Pickers";
 		var appleRemove = nWorkerPrice;
 		do{
 			app--;
@@ -324,6 +327,19 @@ function nWorkerPay(){
 	app--;
 	document.getElementById('appleAmount').innerHTML=app + " Apples";
 	document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
+}
+function nWorkerSell(){
+	if (nWorker >= 1){
+		nWorker--;
+		var appadd = nWorkerPrice - 2;
+		do {
+			app++;
+			appadd--;
+		} while (appadd >= 1)
+		document.getElementById('workerAmount').innerHTML=nWorker + " Apple Pickers";
+		document.getElementById('appleAmount').innerHTML=app + " Apples";
+		document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
+	}
 }
 function gWorkerBuy(){
 	if(app <= gWorkerPrice - 1){
@@ -359,6 +375,19 @@ function gWorkerPay(){
 	document.getElementById('appleAmount').innerHTML=app + " Apples";
 	document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
 }
+function gWorkerSell(){
+	if (gWorker >= 1){
+		gWorker--;
+		var appadd = gWorkerPrice - 2;
+		do {
+			app++;
+			appadd--;
+		} while (appadd >= 1)
+		document.getElementById('appleAmount').innerHTML=app + " Apples";
+		document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
+		document.getElementById('gWorkerAmount').innerHTML= gWorker + " Good Apple Pickers";
+	}
+}
 function diaMinerHire(){
 	if (dia <= diaMinerPrice - 1){
 		document.getElementById('minerNoDia').innerHTML="You don't have enough Diamonds!";
@@ -391,6 +420,18 @@ function diaMinerPay(){
 	dia--;
 	document.getElementById('diaAmount').innerHTML= dia + " Diamond(s)";
 }
+function dMinerSell(){
+	if (diaMiner >= 1){
+		diaMiner--;
+		var diaadd = diaMinerPrice - 2;
+		do {
+			dia++;
+			diaadd--;
+		} while (diaadd >= 1)
+		document.getElementById('minerAmount').innerHTML= diaMiner + " Miner(s)";
+		document.getElementById('diaAmount').innerHTML= dia + " Diamond(s)";
+	}
+}
 function amethMinerBuy(){
 	if(ameth <= amethMinerPrice - 1){
 		document.getElementById('minerNoAmethyst').innerHTML="You don't have enough Amethyst!";
@@ -416,6 +457,18 @@ function amethMinerBuy(){
 		document.getElementById('amethystMinerAmount').innerHTML=amethMiner + " Amethyst Miner(s)";
 		setInterval(amethGain, 15000 - amethMinerTime);
 		setInterval(amethMinerPay, 20000 - amethMinerTime)
+	}
+}
+function aMinerSell(){
+	if (amethMiner >= 1){
+		amethMiner--;
+		var amethadd = amethMinerPrice - 2;
+		do {
+			ameth++;
+			amethadd--;
+		} while (amethadd >= 1)
+		document.getElementById('amethystAmount').innerHTML=ameth + " Amethyst";
+		document.getElementById('amethystMinerAmount').innerHTML=amethMiner + " Amethyst Miner(s)";
 	}
 }
 function amethMinerPay(){
@@ -444,13 +497,25 @@ function breadMakerBuy(){
 			breadRemove--;
 		} while (breadRemove >= 1)
 		document.getElementById('breadAmount').innerHTML=bread + " Bread";
-		document.getElementById('breadMakerAmount').innerHTML=breadMaker + " Bread Bakers"
+		document.getElementById('breadMakerAmount').innerHTML=breadMaker + " Bread Bakers";
 	}
 }
 function breadMakerPay(){
 	bread--;
 	bread--;
 	document.getElementById('breadAmount').innerHTML=bread + " Bread";
+}
+function bMakerSell(){
+	if (breadMaker >= 1){
+		breadMaker--;
+		var breadadd = breadMakerPrice - 2;
+		do {
+			ameth++;
+			amethadd--;
+		} while (amethadd >= 1)
+		document.getElementById('breadAmount').innerHTML=bread + " Bread";
+		document.getElementById('breadMakerAmount').innerHTML=breadMaker + " Bread Bakers";
+	}
 }
 //Get/Buy resources
 function appleGain(){
@@ -482,7 +547,7 @@ document.addEventListener('keyup', function(event){
 	if (event.keyCode == 32){
 		spaceclicked = false;
 	}
-})
+}, true)
 function diaGain(){
 	if (app <= 49){
 		document.getElementById('diaNoApple').innerHTML="You don't have enough Apples!";
