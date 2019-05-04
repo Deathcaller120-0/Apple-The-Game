@@ -93,7 +93,7 @@ function list(){
 	setInterval(listf, 5000)
 	function listf(){
 		if(arr >= cheatList.length){
-			document.getElementById('List').innerHTML = "Use 'list' for Cheats";
+			document.getElementById('List').innerHTML = "Use 'list' for Cheat list";
 			arr++;
 		} else if(arr <= cheatList.length){
 			var disp = cheatList[arr];
