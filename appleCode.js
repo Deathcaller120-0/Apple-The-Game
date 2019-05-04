@@ -280,7 +280,7 @@ function bWorkerSell(){
 			app++;
 			appadd--;
 		} while (appadd >= 1)
-	} else {return;}
+	}
 }
 function nWorkerBuy(){
 	if(app <= nWorkerPrice - 1){
