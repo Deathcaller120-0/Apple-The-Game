@@ -11,7 +11,9 @@ This is just a dumb starter project of mine that is far from finished.
 
 # 1.3.4 Changelog:
 -Game Performance Increased
--Added Fire Button fore Bad Apple Pickers
+-Added Fire Button for Bad Apple Pickers
+-Added 2 New Cheats
+-Removed Large lines covering background Image
 
 # 1.3.3 Changelog:
 -Added Reset Button
