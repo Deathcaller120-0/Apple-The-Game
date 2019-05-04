@@ -467,15 +467,22 @@ function appleGain(){
 	var finishCheck = app + dia + ameth;
 }
 //When spacebar is pressed, app++
+var spaceclicked = false;
 document.addEventListener('keydown', function(event) {
-	if (event.keyCode == 32) {
+	if (event.keyCode == 32 && spaceclicked == false) {
 		setTimeout(appleGain, 10);
+		spaceclicked = true;
 	} else if (event.keyCode == 13 && app >= 6){
 		app--;
 	} else {
 		return;
 	}
 }, true);
+document.addEventListener('keyup', function(event){
+	if (event.keyCode == 32){
+		spaceclicked = false;
+	}
+})
 function diaGain(){
 	if (app <= 49){
 		document.getElementById('diaNoApple').innerHTML="You don't have enough Apples!";
