@@ -108,6 +108,12 @@ function unlocker(){
 }
 //NaN and null Terminator
 function removeNaN(){
+	if(typeof(app) !== undefined && isNaN(app) == false){
+		document.getElementById('appleAmount').innerHTML=app + " Apples";
+	} else {
+		app = 0;
+		document.getElementById('appleAmount').innerHTML=app + " Apples";
+	}
 	if(typeof(dia) !== undefined && isNaN(dia) == false){
 		document.getElementById('diaAmount').innerHTML=dia +" Diamond(s)"
 	} else {
