@@ -13,7 +13,6 @@ This is just a dumb starter project of mine that is far from finished.
 # 1.3.5 Changelog:
 - Added Fire buttons for the rest of the Workers
 - Fixed bug where you could hold Spacebar or Enter and get Apples
-- 
 
 # 1.3.4 Changelog:
 - Game Performance Increased
