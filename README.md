@@ -11,7 +11,7 @@ This is just a dumb starter project of mine that is far from finished.
 
 # 1.3.4 Changelog:
 -Game Performance Increased
--Fixed More Spelling Problems
+-Added Fire Button fore Bad Apple Pickers
 
 # 1.3.3 Changelog:
 -Added Reset Button
