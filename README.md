@@ -9,6 +9,10 @@ This is just a dumb starter project of mine that is far from finished.
 # Features to be Added:
 -None
 
+# 1.3.4 Changelog:
+-Game Performance Increased
+-Fixed More Spelling Problems
+
 # 1.3.3 Changelog:
 -Added Reset Button
 -Added Payment
