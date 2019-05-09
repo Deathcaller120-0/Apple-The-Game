@@ -2,9 +2,10 @@
 This is just a dumb starter project of mine that is far from finished.
 
 # How to play:
-1) Click the big red button. (Or Press spacebar)
-2) Hire People to do your job for you.
-3) Finish
+1) Go (Here)[https://deathcaller120-0.github.io/Apple-The-Game]
+2) Click the big red button. (Or Press spacebar)
+3) Hire People to do your job for you.
+4) Finish
 
 # Features to be Added:
 - None so far
