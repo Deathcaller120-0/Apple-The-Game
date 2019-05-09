@@ -545,6 +545,11 @@ function bMakerSell(){
 }
 //Get/Buy resources
 function appleGain(){
+	document.addEventListener('keydown', function(event) {
+		if (event.keyCode == 13 && app >= 6){
+		app--;
+		}
+	}
 	if (appleUp == true){
 		app++;
 		app++;
@@ -563,8 +568,6 @@ document.addEventListener('keydown', function(event) {
 	if (event.keyCode == 32 && spaceclicked == false) {
 		setTimeout(appleGain, 10);
 		spaceclicked = true;
-	} else if (event.keyCode == 13 && app >= 6){
-		app--;
 	} else {
 		return;
 	}
