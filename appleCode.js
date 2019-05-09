@@ -548,8 +548,8 @@ function appleGain(){
 	document.addEventListener('keydown', function(event) {
 		if (event.keyCode == 13 && app >= 6){
 		app--;
-		}
-	}
+		} else {return;}
+	}, true);
 	if (appleUp == true){
 		app++;
 		app++;
