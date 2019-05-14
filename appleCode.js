@@ -834,19 +834,20 @@ function save(){
 		localStorage.setItem("aMineCount", amethMinerCount);
 		localStorage.setItem("bMakeCount", breadMakerCount);
 		clearTimeout(save);
-	} else {
-		window.alert("Your browser does not support this saving feature. Your progress will be saved for this session ONLY.");
 	}
 }
 //Makes the Workers do their job after load
 function interval(){
-	var bWorkerTime = bWorker / time;
-	var nWorkerTime = nWorker / time;
 	var gWorkerTime = gWorker / time;
 	var diaMinerTime = diaMiner / time;
 	var amethMinerTime = amethMiner / time;
 	var breadMakerTime = breadMaker / time;
-	if(nWorker >= 1){setInterval(nWorkerGain, 5000 - nWorkerTime);}
+	if(nWorker >= 1){
+			do{
+				setInterval(nWorkerGain, 5000 - nWorkerTime);
+				nWorkerTime--;
+			} while (nWorkerTime == nWorker / time)
+		}
 	if(gWorker >= 1){setInterval(gWorkerGain, 5000 - gWorkerTime);}
 	if(diaMiner >= 1){setInterval(diaMinerGain, 10000 - diaMinerTime);}
 	if(amethMiner >= 1){setInterval(amethGain, 15000 - amethMinerTime);}
