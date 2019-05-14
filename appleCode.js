@@ -746,7 +746,7 @@ function finishTry(){
 		console.log(finishCheck);
 		setTimeout(clearNos, 5000);
 	}
-	if(app >= 10000 || dia >= 500 || ameth >= 300 || bread >= 100){
+	if(app >= 10000 && dia >= 500 && ameth >= 300 && bread >= 100){
 		console.log(finishCheck);
 		do {
 			app--;
