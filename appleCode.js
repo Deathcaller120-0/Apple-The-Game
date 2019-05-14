@@ -740,16 +740,15 @@ function clickUp(){
 //Finish
 function finishTry(){
 	var finishCheck = app + dia + ameth + bread;
-	if(finishCheck <= 10999){
+	if(app <= 9999 || dia <= 499 || ameth <= 299 || bread <= 99){
 		window.alert('You need more Resources!');
 		console.log(finishCheck);
 		setTimeout(clearNos, 5000);
 	}
-	if(finishCheck >= 11000){
+	if(app <= 10000 || dia <= 500 || ameth <= 300 || bread <= 100){
 		console.log(finishCheck);
 		do {
 			app--;
-			var finishCheck = app + dia + ameth + bread;
 		} while (app >= 6)
 		do{
 			dia--;
@@ -761,7 +760,7 @@ function finishTry(){
 			bread--;
 		} while (bread >= 1);
 		console.log('Reset Complete.');
-		resetAmount++;
+		resetAmount += 1;
 		bWorker = 0;
 		nWorker = 0;
 		gWorker = 0;
@@ -838,16 +837,12 @@ function save(){
 }
 //Makes the Workers do their job after load
 function interval(){
-	var gWorkerTime = gWorker / time;
-	var diaMinerTime = diaMiner / time;
-	var amethMinerTime = amethMiner / time;
-	var breadMakerTime = breadMaker / time;
-	if(nWorker >= 1){
-			do{
-				setInterval(nWorkerGain, 5000 - nWorkerTime);
-				nWorkerTime--;
-			} while (nWorkerTime == nWorker / time)
-		}
+	nWorkerTime = nWorker / time;
+	gWorkerTime = gWorker / time;
+	diaMinerTime = diaMiner / time;
+	amethMinerTime = amethMiner / time;
+	breadMakerTime = breadMaker / time;
+	if(nWorker >= 1){setInterval(nWorkerGain, 5000 - nWorkerTime);}
 	if(gWorker >= 1){setInterval(gWorkerGain, 5000 - gWorkerTime);}
 	if(diaMiner >= 1){setInterval(diaMinerGain, 10000 - diaMinerTime);}
 	if(amethMiner >= 1){setInterval(amethGain, 15000 - amethMinerTime);}
