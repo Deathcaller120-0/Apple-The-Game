@@ -739,6 +739,7 @@ function clickUp(){
 }
 //Finish
 function finishTry(){
+	debugger;
 	var finishCheck = app + dia + ameth + bread;
 	if(app <= 9999 || dia <= 499 || ameth <= 299 || bread <= 99){
 		window.alert('You need more Resources!');
