@@ -639,7 +639,7 @@ function breadBuy(){
 			amethRemove--;
 		} while(amethRemove >= 1)
 		document.getElementById('breadAmount').innerHTML=bread + " Bread";
-		document.getElementById('amethAmount').innerHTML=ameth + " Amethyst";
+		document.getElementById('amethystAmount').innerHTML=ameth + " Amethyst";
 	}
 }
 //Worker gather resources
