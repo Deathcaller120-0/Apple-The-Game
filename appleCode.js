@@ -946,3 +946,40 @@ function debugReset(){
 		return;
 	}
 }
+//Extra Modes
+function normal(){
+	if(gM !== 0){
+		var pro = prompt("Are you sure you want to continue? Y/n");
+		if(pro == " " || pro == "Y" || pro == "y"){	
+			document.getElementById("appleButton").disabled = false;
+			gM = 0;
+			app = 5;
+			dia = 0;
+			ameth = 0;
+			bread = 0;
+		}
+	}
+}
+function slow(){
+	if(gM !== 1){
+		var pro = prompt("Are you sure you want to continue? Y/n");
+		if(pro == " " || pro == "Y" || pro == "y"){
+			document.getElementById("appleButton").disabled = true;
+			gM = 1;
+			app = 5;
+			dia = 0;
+			ameth = 0;
+			bread = 0;
+			nWorkerPrice = 25;
+			gWorkerPrice = 40;
+			diaMinerPrice = 10;
+			amethMinerPrice = 10;
+			breadMakerPrice = 5;
+			bWorker = 0;
+			nWorker = 0;
+			gWorker = 0;
+			diaMiner = 0;
+			amethMiner = 0;
+		}
+	}
+}
