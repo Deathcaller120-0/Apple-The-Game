@@ -182,7 +182,7 @@ function removeNaN(){
 	} else {
 		console.log(resetAmount);
 	}
-	if(gM == undefined || gM = null){
+	if(gM == undefined || gM == null){
 		gM = 0;
 	}
 	setTimeout(save, 1000);
