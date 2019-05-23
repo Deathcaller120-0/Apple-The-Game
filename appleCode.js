@@ -957,6 +957,7 @@ function normal(){
 			dia = 0;
 			ameth = 0;
 			bread = 0;
+			clearInterval(appleGain);
 		}
 	}
 }
@@ -966,7 +967,7 @@ function slow(){
 		if(pro == " " || pro == "Y" || pro == "y"){
 			document.getElementById("appleButton").disabled = true;
 			gM = 1;
-			app = 5;
+			app = 15;
 			dia = 0;
 			ameth = 0;
 			bread = 0;
@@ -980,6 +981,22 @@ function slow(){
 			gWorker = 0;
 			diaMiner = 0;
 			amethMiner = 0;
+			clearInterval(appleGain);
+			bWorkerBuy();
+		}
+	}
+}
+function fast(){
+	if(gM !== 2){
+		var pro = prompt("Are you sure you want to continue? Y/n");
+		if(pro == " " || pro == "Y" || pro == "y"){
+			gM = 2;
+			app = 45;
+			dia = 0;
+			ameth = 0;
+			bread = 0;
+			setInterval(appleGain, 3000);
+			gWorkerBuy();
 		}
 	}
 }
