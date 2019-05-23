@@ -12,6 +12,7 @@ var app = 5;
 var dia = 0;
 var ameth = 0;
 var bread = 0;
+var gM = 0;
 var appleUp = false;
 var bWorker = 0;
 var nWorker = 0;
@@ -180,6 +181,9 @@ function removeNaN(){
 		resetAmount = 0;
 	} else {
 		console.log(resetAmount);
+	}
+	if(gM == undefined || gM = null){
+		gM = 0;
 	}
 	setTimeout(save, 1000);
 }
@@ -803,6 +807,7 @@ if(typeof(Storage) !==undefined){
 	diaMinerCount = localStorage.getItem("dMineCount");
 	amethMinerCount = localStorage.getItem("aMineCount");
 	breadMakerCOunt = localStorage.getItem("bMakeCount");
+	gM = localStorage.getItem("gameMode");
 	console.log("Save Loaded Successfully.");
 	setTimeout(interval, 100);
 	setTimeout(removeNaN, 10);
@@ -833,6 +838,7 @@ function save(){
 		localStorage.setItem("dMineCount", diaMinerCount);
 		localStorage.setItem("aMineCount", amethMinerCount);
 		localStorage.setItem("bMakeCount", breadMakerCount);
+		localStorage.setItem("gameMode", gM);
 		clearTimeout(save);
 	}
 }
@@ -843,11 +849,41 @@ function interval(){
 	diaMinerTime = diaMiner / time;
 	amethMinerTime = amethMiner / time;
 	breadMakerTime = breadMaker / time;
-	if(nWorker >= 1){setInterval(nWorkerGain, 5000 - nWorkerTime);}
-	if(gWorker >= 1){setInterval(gWorkerGain, 5000 - gWorkerTime);}
-	if(diaMiner >= 1){setInterval(diaMinerGain, 10000 - diaMinerTime);}
-	if(amethMiner >= 1){setInterval(amethGain, 15000 - amethMinerTime);}
-	if(breadMaker >= 1){setInterval(breadMakerGain, 15000 - amethMinerTime);}
+	var nwre = nWorker;
+	var gwre = gWorker;
+	var dmre = diaMiner;
+	var amre = amethMiner;
+	var bmre = breadMaker;
+	if(nWorker >= 1){
+		do {
+			setInterval(nWorkerGain, 5000 - nWorkerTime);
+			nwre--;
+		} while (nwre >= 0)
+	}
+	if(gWorker >= 1){
+		do {
+			setInterval(gWorkerGain, 5000 - gWorkerTime);
+			gwre--;
+		} while (gwre >= 1)
+	}
+	if(diaMiner >= 1){
+		do {
+			setInterval(diaMinerGain, 10000 - diaMinerTime);
+			dmre--;
+		} while (dmre >= 1)
+	}
+	if(amethMiner >= 1){
+		do {
+			setInterval(amethGain, 15000 - amethMinerTime);
+			amre--;
+		} while (amre >= 1)
+	}
+	if(breadMaker >= 1){
+		do {
+			setInterval(breadMakerGain, 15000 - amethMinerTime);
+			bmre--;
+		} while (bmre >= 1)
+	}
 	clearTimeout(interval);
 }
 //Debugging only
