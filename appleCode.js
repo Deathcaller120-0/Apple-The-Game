@@ -330,7 +330,7 @@ function nWorkerBuy(){
 			nWorkerPrice++;
 			do{
 				nWorkerCount++;
-			} while (nWorkerCount <= 29)
+			} while (nWorkerCount <= 19)
 			document.getElementById('nWorkerPrice').innerHTML=nWorkerPrice;
 		}
 		document.getElementById('workerAmount').innerHTML=nWorker + " Apple Pickers";
@@ -362,6 +362,10 @@ function nWorkerSell(){
 			clearInterval(nWorkerGain);
 			clearInterval(nWorkerPay);
 		}
+		if (nWorker >= 499){
+			document.getElementById('hireButton').disabled=false;
+			document.getElementById('hireButton').innerHTML = "Hire Good Apple Picker";
+		}
 	}
 }
 function gWorkerBuy(){
@@ -377,7 +381,7 @@ function gWorkerBuy(){
 			gWorkerPrice++;
 			do{
 				gWorkerCount++;
-			} while (gWorkerCount <= 39)
+			} while (gWorkerCount <= 29)
 			document.getElementById('gWorkerPrice').innerHTML=gWorkerPrice;
 		}
 		document.getElementById('gWorkerAmount').innerHTML= gWorker + " Good Apple Pickers";
@@ -411,6 +415,7 @@ function gWorkerSell(){
 		}
 		if (gWorker >= 499){
 			document.getElementById('goodHireButton').disabled=false;
+			document.getElementById('goodHireButton').innerHTML = "Hire Good Apple Picker";
 		}
 	}
 }
@@ -427,7 +432,7 @@ function diaMinerHire(){
 			diaMinerPrice++;
 			do {
 				diaMinerCount++;
-			} while (diaMinerCount <= 9)
+			} while (diaMinerCount <= 8)
 			document.getElementById('diaMinerPrice').innerHTML=diaMinerPrice;
 		}
 		var diamondRemove = diaMinerPrice;
@@ -457,6 +462,7 @@ function dMinerSell(){
 		}
 		if (diaMiner >= 199){
 			document.getElementById('minerHireButton').disabled=false;
+			document.getElementById('minerHireButton').innerHTML = "Hire Diamond Miner";
 		}
 	}
 }
@@ -473,7 +479,7 @@ function amethMinerBuy(){
 			amethMinerPrice++;
 			do {
 				amethMinerCount++;
-			} while (amethMinerCount <= 9)
+			} while (amethMinerCount <= 8)
 			document.getElementById('amethMinerPrice').innerHTML=amethMinerPrice;
 		}
 		var amethRemove = amethMinerPrice;
@@ -496,6 +502,10 @@ function aMinerSell(){
 		if (amethMiner == 0){
 			clearInterval(amethGain);
 			clearInterval(amethMinerPay);
+		}
+		if(amethMiner >= 99){
+			document.getElementById('amethystWorker').disabled=false;
+			document.getElementById('amethystWorker').innerHTML = "Hire Amethyst Miner";
 		}
 	}
 }
