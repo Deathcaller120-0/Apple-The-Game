@@ -30,27 +30,31 @@ function loader(){
 				document.getElementById('input').innerHTML = " ";
 				break;
 			case "autoApp":
-				if(autoAppEx == true){
+				if(resetAmount >= 1){
+					if(autoAppEx == true){
+						break;
+					}
+					autoAppEx = true;
+					setTimeout(autoApp, 100);
+					scriptOutObj.style.color="lime";
+					scriptOutObj.style.fontfamily="arial";
+					scriptOutObj.innerHTML = input + " Loaded";
+					document.getElementById('input').innerHTML = " ";
 					break;
 				}
-				autoAppEx = true;
-				setTimeout(autoApp, 100);
-				scriptOutObj.style.color="lime";
-				scriptOutObj.style.fontfamily="arial";
-				scriptOutObj.innerHTML = input + " Loaded";
-				document.getElementById('input').innerHTML = " ";
-				break;
 			case "breadMaker":
-				if(breMakEx == true){
+				if(resetAmount >= 1){
+					if(breMakEx == true){
+						break;
+					}
+					breMakEx = true;
+					setInterval(breadAutoMaker, 120000);
+					scriptOutObj.style.color="lime";
+					scriptOutObj.style.fontfamily="arial";
+					scriptOutObj.innerHTML = input + " Loaded";
+					document.getElementById('input').innerHTML = " ";
 					break;
 				}
-				breMakEx = true;
-				setInterval(breadAutoMaker, 120000);
-				scriptOutObj.style.color="lime";
-				scriptOutObj.style.fontfamily="arial";
-				scriptOutObj.innerHTML = input + " Loaded";
-				document.getElementById('input').innerHTML = " ";
-				break;
 			case "removeNaN":
 				setTimeout(removeNaN, 100);
 				scriptOutObj.style.color="lime";
