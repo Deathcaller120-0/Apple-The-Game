@@ -1009,6 +1009,16 @@ function fast(){
 			dia = 0;
 			ameth = 0;
 			bread = 0;
+			nWorkerPrice = 25;
+			gWorkerPrice = 40;
+			diaMinerPrice = 10;
+			amethMinerPrice = 10;
+			breadMakerPrice = 5;
+			bWorker = 0;
+			nWorker = 0;
+			gWorker = 0;
+			diaMiner = 0;
+			amethMiner = 0;
 			setInterval(appleGain, 3000);
 			gWorkerBuy();
 		}
