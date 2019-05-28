@@ -41,7 +41,7 @@ function loader(){
 					scriptOutObj.innerHTML = input + " Loaded";
 					document.getElementById('input').innerHTML = " ";
 					break;
-				}
+				} else {break;}
 			case "breadMaker":
 				if(resetAmount >= 1){
 					if(breMakEx == true){
@@ -54,7 +54,7 @@ function loader(){
 					scriptOutObj.innerHTML = input + " Loaded";
 					document.getElementById('input').innerHTML = " ";
 					break;
-				}
+				} else {break;}
 			case "removeNaN":
 				setTimeout(removeNaN, 100);
 				scriptOutObj.style.color="lime";
@@ -87,7 +87,7 @@ function loader(){
 				scriptOutObj.style.color="red";
 				scriptOutObj.innerHTML = "Hey, if you need to know the cheats, use 'list'.";
 				document.getElementById('input').innerHTML = " ";
-			break;	
+				break;	
 		}
 	}
 }
