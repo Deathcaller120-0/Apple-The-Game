@@ -106,6 +106,16 @@ function unlocker(){
 	} else {
 		document.getElementById('breadMakerButton').style.backgroundColor ="#323639";
 	}
+	if (resetAmount >= 1){
+		document.getElementById('gm1').innerHTML = "Unlocked";
+	} else {
+		document.getElementById('gm1').innerHTML = "Locked";
+	}
+	if (resetAmount >= 2){
+		document.getElementById('gm2').innerHTML = "Unlocked";
+	} else {
+		document.getElementById('gm2').innerHTML = "Locked";
+	}
 }
 //NaN and null Terminator
 function removeNaN(){
