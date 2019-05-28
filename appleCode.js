@@ -108,13 +108,17 @@ function unlocker(){
 	}
 	if (resetAmount >= 1){
 		document.getElementById('gm1').innerHTML = "Unlocked";
+		document.getElementById('gm1').style.color = "lime";
 	} else {
 		document.getElementById('gm1').innerHTML = "Locked";
+		document.getElementById('gm1').style.color = "red";
 	}
 	if (resetAmount >= 2){
 		document.getElementById('gm2').innerHTML = "Unlocked";
+		document.getElementById('gm2').style.color = "lime";
 	} else {
 		document.getElementById('gm2').innerHTML = "Locked";
+		document.getElementById('gm2').style.color = "red";
 	}
 }
 //NaN and null Terminator
