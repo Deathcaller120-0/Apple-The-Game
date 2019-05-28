@@ -962,7 +962,7 @@ function normal(){
 	}
 }
 function slow(){
-	if(gM !== 1){
+	if(gM !== 1 && resetAmount >= 1){
 		var pro = prompt("Are you sure you want to continue? Y/n");
 		if(pro == " " || pro == "Y" || pro == "y"){
 			document.getElementById("appleButton").disabled = true;
@@ -987,7 +987,7 @@ function slow(){
 	}
 }
 function fast(){
-	if(gM !== 2){
+	if(gM !== 2 && resetAmount >= 2){
 		var pro = prompt("Are you sure you want to continue? Y/n");
 		if(pro == " " || pro == "Y" || pro == "y"){
 			gM = 2;
