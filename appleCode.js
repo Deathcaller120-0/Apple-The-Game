@@ -364,7 +364,7 @@ function nWorkerSell(){
 		}
 		if (nWorker >= 499){
 			document.getElementById('hireButton').disabled=false;
-			document.getElementById('hireButton').innerHTML = "Hire Good Apple Picker";
+			document.getElementById('hireButton').innerHTML = "Hire Apple Picker";
 		}
 	}
 }
