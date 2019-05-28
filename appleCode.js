@@ -822,7 +822,7 @@ if(typeof(Storage) !==undefined){
 	breadMaker = localStorage.getItem("breadBakers");
 	timeSpeedUp = localStorage.getItem("nWorkerSpeed");		
 	appleUp = localStorage.getItem("clickUp");
-	resetAmount = localStorage.getItem("finishCount");
+	resetAmount = localStorage.getItem("finishesDone");
 	nWorkerPrice = localStorage.getItem("nWorkPrice");
 	gWorkerPrice = localStorage.getItem("gWorkPrice");
 	diaMinerPrice = localStorage.getItem("dMinePrice");
