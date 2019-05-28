@@ -308,12 +308,7 @@ function bWorkerBuy() {
 function bWorkerSell(){
 	if (bWorker >= 1){
 		bWorker--;
-		var appadd = 8;
 		app += 8;
-		/*do {
-			app++;
-			appadd--;
-		} while (appadd >= 1)*/
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 		document.getElementById('titleApples').innerHTML=app + " Apples Collected | Apple: The Game!";
 		document.getElementById('badWorkerAmount').innerHTML=bWorker + " Bad Apple Pickers";
@@ -359,12 +354,7 @@ function nWorkerPay(){
 function nWorkerSell(){
 	if (nWorker >= 1){
 		nWorker--;
-		var appadd = nWorkerPrice - 2;
 		app += nWorkerPrice - 2;
-		/*do {
-			app++;
-			appadd--;
-		} while (appadd >= 1)*/
 		document.getElementById('workerAmount').innerHTML=nWorker + " Apple Pickers";
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 		document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
@@ -411,12 +401,7 @@ function gWorkerPay(){
 function gWorkerSell(){
 	if (gWorker >= 1){
 		gWorker--;
-		var appadd = gWorkerPrice - 2;
 		app += gWorkerPrice - 2;
-		/*do {
-			app++;
-			appadd--;
-		} while (appadd >= 1)*/
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 		document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
 		document.getElementById('gWorkerAmount').innerHTML= gWorker + " Good Apple Pickers";
@@ -463,12 +448,7 @@ function diaMinerPay(){
 function dMinerSell(){
 	if (diaMiner >= 1){
 		diaMiner--;
-		var diaadd = diaMinerPrice - 2;
 		dia += diaMinerPrice - 2;
-		/*do {
-			dia++;
-			diaadd--;
-		} while (diaadd >= 1)*/
 		document.getElementById('minerAmount').innerHTML= diaMiner + " Miner(s)";
 		document.getElementById('diaAmount').innerHTML= dia + " Diamond(s)";
 		if (diaMiner == 0){
@@ -510,12 +490,7 @@ function amethMinerBuy(){
 function aMinerSell(){
 	if (amethMiner >= 1){
 		amethMiner--;
-		var amethadd = amethMinerPrice - 2;
 		ameth += amethMinerPrice - 2;
-		/*do {
-			ameth++;
-			amethadd--;
-		} while (amethadd >= 1)*/
 		document.getElementById('amethystAmount').innerHTML=ameth + " Amethyst";
 		document.getElementById('amethystMinerAmount').innerHTML=amethMiner + " Amethyst Miner(s)";
 		if (amethMiner == 0){
@@ -559,12 +534,7 @@ function breadMakerPay(){
 function bMakerSell(){
 	if (breadMaker >= 1){
 		breadMaker--;
-		var breadadd = breadMakerPrice - 2;
 		bread += breadMakerPrice - 2;
-		/*do {
-			ameth++;
-			amethadd--;
-		} while (amethadd >= 1)*/
 		document.getElementById('breadAmount').innerHTML=bread + " Bread";
 		document.getElementById('breadMakerAmount').innerHTML=breadMaker + " Bread Bakers";
 		if (breadMaker == 0){
