@@ -280,7 +280,7 @@ function workerCheck(){
 	if (nWorker >= 500){
 		document.getElementById('hireButton').disabled="true";
 		document.getElementById('hireButton').innerHTML="MAXED OUT";
-		if (nWorker >= 601){
+		if (nWorker >= 501){
 			do {
 				nWorker--;
 			} while (nWorker >= 501)
@@ -292,7 +292,7 @@ function workerCheck(){
 	if (gWorker >= 500){
 		document.getElementById('goodHireButton').disabled="true";
 		document.getElementById('goodHireButton').innerHTML="MAXED OUT";
-		if (gWorker >= 601){
+		if (gWorker >= 501){
 			do {
 				gWorker--;
 			} while (gWorker >= 501)
@@ -304,10 +304,10 @@ function workerCheck(){
 	if (diaMiner >= 200){
 		document.getElementById('minerHireButton').disabled="true";
 		document.getElementById('minerHireButton').innerHTML="MAXED OUT";
-		if (diaMiner >= 301){
+		if (diaMiner >= 201){
 			do {
 				diaMiner--;
-			} while (diaMiner >= 301)
+			} while (diaMiner >= 201)
 		}
 	}
 	if (amethMinerPrice == undefined || amethMinerPrice == null || amethMinerPrice == NaN){
