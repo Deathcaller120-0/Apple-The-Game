@@ -136,6 +136,31 @@ function unlocker(){
 	if (in3 == true){
 		amethApple();
 	}
+	var in4 = document.getElementById('autobh').checked;
+	if (in4 == true){
+		bWorkerBuy();
+	}
+	var in5 = document.getElementById('autonh').checked;
+	if (in5 == true){
+		nWorkerBuy();
+	}
+	var in6 = document.getElementById('autogh').checked;
+	if (in6 == true){
+		gWorkerBuy();
+	}
+	
+	var in7 = document.getElementById('autodm').checked;
+	if (in7 == true){
+		diaMinerHire();
+	}
+	var in8 = document.getElementById('autoam').checked;
+	if (in8 == true){
+		amethMinerBuy();
+	}
+	var in9 = document.getElementById('autobm').checked;
+	if (in9 == true){
+		breadMakerBuy();
+	}
 }
 //NaN and null Terminator
 function removeNaN(){
