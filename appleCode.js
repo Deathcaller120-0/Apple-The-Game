@@ -121,44 +121,44 @@ function unlocker(){
 		document.getElementById('gm2').style.color = "red";
 	}
 	var in0 = document.getElementById('autoDia').checked;
-	if (in0 == true){
+	if (in0 == true && app >= 50){
 		diaGain();
 	}
 	var in1 = document.getElementById('autoAmeth').checked;
-	if (in1 == true){
+	if (in1 == true && dia >= 20){
 		amethBuy();
 	}
 	var in2 = document.getElementById('autoBread').checked;
-	if (in2 == true){
+	if (in2 == true && ameth >= 30){
 		breadBuy();
 	}
 	var in3 = document.getElementById('autoApple').checked;
-	if (in3 == true){
+	if (in3 == true && ameth >= 1){
 		amethApple();
 	}
 	var in4 = document.getElementById('autobh').checked;
-	if (in4 == true){
+	if (in4 == true && app >= 10){
 		bWorkerBuy();
 	}
 	var in5 = document.getElementById('autonh').checked;
-	if (in5 == true){
+	if (in5 == true && app >= nWorkerPrice){
 		nWorkerBuy();
 	}
 	var in6 = document.getElementById('autogh').checked;
-	if (in6 == true){
+	if (in6 == true && app >= gWorkerPrice){
 		gWorkerBuy();
 	}
 	
 	var in7 = document.getElementById('autodm').checked;
-	if (in7 == true){
+	if (in7 == true && dia >= diaMinerPrice){
 		diaMinerHire();
 	}
 	var in8 = document.getElementById('autoam').checked;
-	if (in8 == true){
+	if (in8 == true && ameth >= amethMinerPrice){
 		amethMinerBuy();
 	}
 	var in9 = document.getElementById('autobm').checked;
-	if (in9 == true){
+	if (in9 == true && bread >= breadMakerPrice){
 		breadMakerBuy();
 	}
 }
