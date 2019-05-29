@@ -120,6 +120,22 @@ function unlocker(){
 		document.getElementById('gm2').innerHTML = "Locked";
 		document.getElementById('gm2').style.color = "red";
 	}
+	var in0 = document.getElementById('autoDia').checked;
+	if (in0 == true){
+		diaGain();
+	}
+	var in1 = document.getElementById('autoAmeth').checked;
+	if (in1 == true){
+		amethBuy();
+	}
+	var in2 = document.getElementById('autoBread').checked;
+	if (in2 == true){
+		breadBuy();
+	}
+	var in3 = document.getElementById('autoApple').checked;
+	if (in3 == true){
+		amethApple();
+	}
 }
 //NaN and null Terminator
 function removeNaN(){
