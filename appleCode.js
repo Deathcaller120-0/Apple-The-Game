@@ -138,28 +138,38 @@ function unlocker(){
 	}
 	var in4 = document.getElementById('autobh').checked;
 	if (in4 == true && app >= 10){
-		bWorkerBuy();
+		if (bWorker <= 499){
+			bWorkerBuy();
+		}
 	}
 	var in5 = document.getElementById('autonh').checked;
 	if (in5 == true && app >= nWorkerPrice){
-		nWorkerBuy();
+		if (nWorker <= 499){
+			nWorkerBuy();
+		}
 	}
 	var in6 = document.getElementById('autogh').checked;
 	if (in6 == true && app >= gWorkerPrice){
-		gWorkerBuy();
+		if (gWorker <= 499){
+			gWorkerBuy();
+		}
 	}
-	
 	var in7 = document.getElementById('autodm').checked;
 	if (in7 == true && dia >= diaMinerPrice){
+		if (diaMiner <= 199)
 		diaMinerHire();
 	}
 	var in8 = document.getElementById('autoam').checked;
 	if (in8 == true && ameth >= amethMinerPrice){
-		amethMinerBuy();
+		if (amethMiner <= 99){
+			amethMinerBuy();
+		}
 	}
 	var in9 = document.getElementById('autobm').checked;
 	if (in9 == true && bread >= breadMakerPrice){
-		breadMakerBuy();
+		if (breadMaker <= 74){
+			breadMakerBuy();
+		}
 	}
 }
 //NaN and null Terminator
