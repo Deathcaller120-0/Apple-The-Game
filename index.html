@@ -80,6 +80,8 @@
 			<span id="badWorkerAmount" class="text">0 Bad Apple Pickers</span>
 			<span id="badNoApple" class="text"></span>
 			<br>
+			<input type="checkbox" id="autobh"><span class="text">Auto Hire Bad Pickers</span>
+			<br>
     	    		<button id="hireButton" onclick="nWorkerBuy()" style="background-color:rgb(120,255,0); color:#000;" class="text">Hire Apple Picker</button>
 			<button onclick="nWorkerSell()" style="background-color:#000; color:#fff; width: 100px;" class="text">Fire!</button>
 			<span class="tooltip text"><span id="nWorkerPrice">25</span> Apples for Picker
@@ -87,6 +89,8 @@
 			</span>
 			<span id="workerAmount" class="text">0 Apple Pickers</span>
 			<span id="normNoApple" class="text"></span>
+			<br>
+			<input type="checkbox" id="autonh"><span class="text">Auto Hire Pickers</span>
 			<br>
 	        	<button id="goodHireButton" onclick="gWorkerBuy()" style="background-color:rgb(0,190,255); color:#000;" class="text">Hire Good Apple Picker</button>
 			<button onclick="gWorkerSell()" style="background-color:#000; color:#fff; width: 100px;" class="text">Fire!</button>
@@ -96,11 +100,15 @@
 			<span id="gWorkerAmount" class="text">0 Good Apple Pickers</span>
 				<span id="goodNoApple" class="text"></span>
 			<br>
+			<input type="checkbox" id="autogh"><span class="text">Auto Hire Good Pickers</span>
+			<br>
 			<button id="minerHireButton" onclick="diaMinerHire()" style="background-color:rgb(51, 214, 255);" class="text">Hire Diamond Miner</button>
 			<button onclick="dMinerSell()" style="background-color:#000; color:#fff; width: 100px;" class="text">Fire!</button>
     	   		 <span class="text"><span id="diaMinerPrice">10</span> Diamonds for Diamond Miner</span>
 			<span id="minerAmount" class="text">0 Diamond Miners</span>
 			<span id="minerNoDia" class="text"></span>
+			<br>
+			<input type="checkbox" id="autodm"><span class="text">Auto Hire Diamond Miners</span>
 			<br>
 			<button id="amethystWorker" style="background-color:rgb(127,0,255);" onclick="amethMinerBuy()" class="text">Hire Amethyst Miner</button>
 			<button onclick="aMinerSell()" style="background-color:#000; color:#fff; width: 100px;" class="text">Fire!</button>
@@ -108,11 +116,15 @@
 			<span id="amethystMinerAmount" class="text">0 Amethyst Miners</span>
 			<span id="minerNoAmethyst" class="text"></span>
 			<br>
+			<input type="checkbox" id="autoam"><span class="text">Auto Hire Amethyst Miners</span>
+			<br>
 			<button id="breadMakerButton" style="background-color:#b59a4a;" onclick="breadMakerBuy()" class="text">Hire Bread Maker</button>
 			<button onclick="bMakerSell()" style="background-color:#000; color:#fff; width: 100px;" class="text">Fire!</button>
 			<span class="text"><span id="breadMakerPrice">5</span> Bread for Bread Baker</span>
 			<span id="breadMakerAmount" class="text">0 Bread Bakers</span>
 			<span id="bMakerNoBread" class="text"></span>
+			<br>
+			<input type="checkbox" id="autobm"><span class="text">Auto Hire Bread Makers</span>
 			</b>
 		</div>
 		<div id="upgrades">
