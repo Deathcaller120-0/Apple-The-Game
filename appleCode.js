@@ -334,6 +334,9 @@ function workerCheck(){
 			} while (breadMaker >= 76)
 		}
 	}
+	if (bWorker >= 500 && nWorker >= 500 && gWorker >= 500){
+		app = Infinity;
+	}
 }
 function bWorkerBuy() {
 	if(app <= 9){
