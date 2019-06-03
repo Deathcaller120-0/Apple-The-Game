@@ -224,15 +224,35 @@ function unlocker(){
 			breadMakerBuy();
 		}
 	}
+	if (app >= 10000001){
+		do {
+			app--;
+		} while (app >= 10000001)
+	}
 	var calcAPP = app / 10000000 * 100;
 	document.getElementById('Appbar').style.width = calcAPP + "px";
 	
+	if (dia >= 10000001){
+		do {
+			dia--;
+		} while (dia >= 10000001)
+	}
 	var calcDIA = dia / 10000000 * 100;
 	document.getElementById('DiaBar').style.width = calcDIA + "px";
 	
+	if (ameth >= 10000001){
+		do {
+			ameth--;
+		} while (ameth >= 10000001)
+	}
 	var calcAMETH = ameth / 10000000 * 100;
 	document.getElementById('Amethbar').style.width = calcAMETH + "px";
 	
+	if (bread >= 10000001){
+		do {
+			bread--;
+		} while (bread >= 10000001)
+	}
 	var calcBREAD = bread / 10000000 * 100;
 	document.getElementById('Breadbar').style.width = calcBREAD + "px";
 }
