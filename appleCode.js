@@ -43,6 +43,59 @@ setInterval(workerCheck, 500);
 setInterval(unlocker, 500);
 setInterval(save, 30000);
 //Other
+function slowgain(){
+	clearInterval(nWorkerGain());
+	clearInterval(gWorkerGain());
+	clearInterval(diaMinerGain());
+	clearInterval(amethGain());
+	clearInterval(breadMakerGain());
+	var nwre = nWorker;
+	var gwre = gWorker;
+	var dmre = diaMiner;
+	var amre = amethMiner;
+	var bmre = breadMaker;
+	if(nWorker >= 1){
+		do {
+			setTimeout(function(){
+				setInterval(nWorkerGain, 8000);
+			}, 300);
+			nwre--;
+		} while (nwre >= 0)
+	}
+	if(gWorker >= 1){
+		do {
+			setTimeout(function(){
+				setInterval(gWorkerGain, 8000);
+			}, 400);
+			gwre--;
+		} while (gwre >= 1)
+	}
+	if(diaMiner >= 1){
+		do {
+			setTimeout(function(){
+				setInterval(diaMinerGain, 12000);
+			}, 500);
+			dmre--;
+		} while (dmre >= 1)
+	}
+	if(amethMiner >= 1){
+		do {
+			setTimeout(function(){
+				setInterval(amethGain, 18000);
+			}, 600);
+			amre--;
+		} while (amre >= 1)
+	}
+	if(breadMaker >= 1){
+		do {
+			setTimeout(function(){
+				setInterval(breadMakerGain, 18000);
+			}, 700);
+			bmre--;
+		} while (bmre >= 1)
+	}
+}
+
 function unlocker(){
 	if (app >= 10){
 		document.getElementById('badHireButton').style.backgroundColor ="#994d00";
@@ -926,7 +979,7 @@ function interval(){
 		do {
 			setTimeout(function(){
 				setInterval(gWorkerGain, 5000 - gWorkerTime);
-			}, 300);
+			}, 400);
 			gwre--;
 		} while (gwre >= 1)
 	}
@@ -934,7 +987,7 @@ function interval(){
 		do {
 			setTimeout(function(){
 				setInterval(diaMinerGain, 10000 - diaMinerTime);
-			}, 300);
+			}, 500);
 			dmre--;
 		} while (dmre >= 1)
 	}
@@ -942,15 +995,15 @@ function interval(){
 		do {
 			setTimeout(function(){
 				setInterval(amethGain, 15000 - amethMinerTime);
-			}, 300);
+			}, 600);
 			amre--;
 		} while (amre >= 1)
 	}
 	if(breadMaker >= 1){
 		do {
 			setTimeout(function(){
-				setInterval(breadMakerGain, 15000 - amethMinerTime);
-			}, 300);
+				setInterval(breadMakerGain, 15000 - breadMakerTime);
+			}, 700);
 			bmre--;
 		} while (bmre >= 1)
 	}
