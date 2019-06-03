@@ -66,7 +66,7 @@ function slowgain(){
 		do {
 			setTimeout(function(){
 				setInterval(gWorkerGain, 8000);
-			}, 400);
+			}, 1400);
 			gwre--;
 		} while (gwre >= 1)
 	}
@@ -74,7 +74,7 @@ function slowgain(){
 		do {
 			setTimeout(function(){
 				setInterval(diaMinerGain, 12000);
-			}, 500);
+			}, 2500);
 			dmre--;
 		} while (dmre >= 1)
 	}
@@ -82,7 +82,7 @@ function slowgain(){
 		do {
 			setTimeout(function(){
 				setInterval(amethGain, 18000);
-			}, 600);
+			}, 3600);
 			amre--;
 		} while (amre >= 1)
 	}
@@ -90,7 +90,7 @@ function slowgain(){
 		do {
 			setTimeout(function(){
 				setInterval(breadMakerGain, 18000);
-			}, 700);
+			}, 4700);
 			bmre--;
 		} while (bmre >= 1)
 	}
