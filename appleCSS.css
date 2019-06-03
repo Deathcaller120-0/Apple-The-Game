@@ -62,3 +62,7 @@ button {
 	background-color:#0f0;
 	width:1%;
 }
+.barContain {
+	background-color:grey;
+	width:99%
+}
