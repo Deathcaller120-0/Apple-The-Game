@@ -224,6 +224,17 @@ function unlocker(){
 			breadMakerBuy();
 		}
 	}
+	var calcAPP = app / 10000000 * 100;
+	document.getElementById('Appbar').style.width = calcAPP + "px";
+	
+	var calcDIA = dia / 10000000 * 100;
+	document.getElementById('DiaBar').style.width = calcDIA + "px";
+	
+	var calcAMETH = ameth / 10000000 * 100;
+	document.getElementById('Amethbar').style.width = calcAMETH + "px";
+	
+	var calcBREAD = bread / 10000000 * 100;
+	document.getElementById('Breadbar').style.width = calcBREAD + "px";
 }
 //NaN and null Terminator
 function removeNaN(){
