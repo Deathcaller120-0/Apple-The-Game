@@ -238,7 +238,7 @@ function unlocker(){
 		} while (dia >= 10000001)
 	}
 	var calcDIA = dia / 10000000 * 100;
-	document.getElementById('DiaBar').style.width = calcDIA + "%";
+	document.getElementById('Diabar').style.width = calcDIA + "%";
 	
 	if (ameth >= 10000001){
 		do {
