@@ -915,6 +915,7 @@ function finishTry(){
 		gWorker = 0;
 		diaMiner = 0;
 		amethMiner = 0;
+		breadMaker = 0;
 		var timeSpeedUpRemove = 20;
 		do{
 			timeSpeedUp--;
