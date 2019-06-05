@@ -19,13 +19,13 @@ var nWorker = 0;
 var nWorkerPrice = 25;
 var nWorkerCount = 30;
 var gWorker = 0;
-var gWorkerPrice = 40;
+var gWorkerPrice = 40; 
 var gWorkerCount = 20;
 var diaMiner = 0;
-var diaMinerPrice = 10;
+var diaMinerPrice = 10; 
 var diaMinerCount = 10;
 var amethMiner = 0;
-var amethMinerPrice = 10;
+var amethMinerPrice = 10; 
 var amethMinerCount = 10;
 var breadMaker = 0;
 var breadMakerPrice = 5;
@@ -916,6 +916,11 @@ function finishTry(){
 		diaMiner = 0;
 		amethMiner = 0;
 		breadMaker = 0;
+		breadMakerPrice = 5; 
+		amethMinerPrice = 10; 
+		diaMinerPrice = 10; 
+		gWorkerPrice = 40; 
+		nWorkerPrice = 25;
 		var timeSpeedUpRemove = 20;
 		do{
 			timeSpeedUp--;
