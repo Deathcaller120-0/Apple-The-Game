@@ -931,6 +931,7 @@ function finishTry(){
 		clearInterval(gWorkerGain);
 		clearInterval(diaMinerGain);
 		clearInterval(amethGain);
+		location.reload();
 	}
 }
 //Save Managment
