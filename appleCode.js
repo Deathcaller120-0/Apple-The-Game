@@ -999,28 +999,31 @@ function interval(){
 	var amre = amethMiner;
 	var bmre = breadMaker;
 	if(nWorker >= 1){
-		do {
-			setTimeout(function(){
-				setInterval(nWorkerGain, 5000 - nWorkerTime);
-			}, 300);
+		setInterval(function(){
+			setInterval(nWorkerGain, 5000 - nWorkerTime);
 			nwre--;
-		} while (nwre >= 0)
+			if (nwre <= 0){
+				clearInterval(this);
+			}
+		}, 300);
 	}
 	if(gWorker >= 1){
-		do {
-			setTimeout(function(){
-				setInterval(gWorkerGain, 5000 - gWorkerTime);
-			}, 400);
+		setTimeout(function(){
+			setInterval(gWorkerGain, 5000 - gWorkerTime);
 			gwre--;
-		} while (gwre >= 1)
+			if (gwre <= 0){
+				clearInterval(this);
+			}
+		}, 400);
 	}
 	if(diaMiner >= 1){
-		do {
-			setTimeout(function(){
-				setInterval(diaMinerGain, 10000 - diaMinerTime);
-			}, 500);
+		setTimeout(function(){
+			setInterval(diaMinerGain, 10000 - diaMinerTime);
 			dmre--;
-		} while (dmre >= 1)
+			if (dmre <= 0){
+				clearInterval(this);
+			}
+		}, 500);
 	}
 	if(amethMiner >= 1){
 		do {
