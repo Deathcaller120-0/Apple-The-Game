@@ -1008,7 +1008,7 @@ function interval(){
 		}, 300);
 	}
 	if(gWorker >= 1){
-		setTimeout(function(){
+		setInterval(function(){
 			setInterval(gWorkerGain, 5000 - gWorkerTime);
 			gwre--;
 			if (gwre <= 0){
@@ -1017,7 +1017,7 @@ function interval(){
 		}, 400);
 	}
 	if(diaMiner >= 1){
-		setTimeout(function(){
+		setInterval(function(){
 			setInterval(diaMinerGain, 10000 - diaMinerTime);
 			dmre--;
 			if (dmre <= 0){
@@ -1026,20 +1026,22 @@ function interval(){
 		}, 500);
 	}
 	if(amethMiner >= 1){
-		do {
-			setTimeout(function(){
-				setInterval(amethGain, 15000 - amethMinerTime);
-			}, 600);
+		setInterval(function(){
+			setInterval(amethGain, 15000 - amethMinerTime);
 			amre--;
-		} while (amre >= 1)
+			if (amre <= 0){
+				clearInterval(this);
+			}
+		}, 600);
 	}
 	if(breadMaker >= 1){
-		do {
-			setTimeout(function(){
-				setInterval(breadMakerGain, 15000 - breadMakerTime);
-			}, 700);
+		setTimeout(function(){
+			setInterval(breadMakerGain, 15000 - breadMakerTime);
 			bmre--;
-		} while (bmre >= 1)
+			if (bmre <= 0){
+				clearInterval(this);
+			}
+		}, 700);
 	}
 	clearTimeout(interval);
 }
