@@ -932,7 +932,7 @@ function finishTry(){
 		clearInterval(diaMinerGain);
 		clearInterval(amethGain);
 		save();
-		setTimeout(function(){location.reload();}, 2000};
+		setTimeout(function(){location.reload();}, 2000);
 	}
 }
 //Save Managment
