@@ -729,6 +729,7 @@ function diaGain(){
 	if (app <= 49){
 		document.getElementById('diaNoApple').innerHTML="You don't have enough Apples!";
 		setTimeout(clearNos, 5000);
+		clearInterval(this);
 	}
 	if (app >= 50){
 		dia++;
@@ -745,7 +746,8 @@ function diaGain(){
 function amethBuy(){
 	if(dia <= 19){
 		document.getElementById('amethystNoDia').innerHTML="You don't have enough Diamonds!";
-		setTimeout(clearNos, 5000)
+		setTimeout(clearNos, 5000);
+		clearInterval(this);
 	}
 	if(dia >= 20){
 		var diamondRemove = 20;
@@ -762,6 +764,7 @@ function amethApple(){
 	if(ameth <= 0){
 		document.getElementById('appleNoAmethyst').innerHTML="You have no Amethyst!";
 		setTimeout(clearNos, 5000);
+		clearInterval(this);
 	}
 	if(ameth >= 1){
 		ameth--;
@@ -778,6 +781,7 @@ function breadBuy(){
 	if(ameth <= 29){
 		document.getElementById('breadNoAmethyst').innerHTML="You need more Amethyst!";
 		setTimeout(clearNos, 5000);
+		clearInterval(this);
 	}
 	if(ameth >= 30){
 		bread++;
