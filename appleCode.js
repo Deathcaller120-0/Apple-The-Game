@@ -433,10 +433,7 @@ function bWorkerBuy() {
 		}
 		bWorker++;
 		document.getElementById('badWorkerAmount').innerHTML=bWorker + " Bad Apple Pickers";
-		var appleRemove = 10;
-		do{
-			app--;
-			appleRemove--;
+		app += 10;
 		} while (appleRemove >= 1)
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 		document.getElementById('titleApples').innerHTML=app + " Apples Collected | Apple: The Game!";
@@ -472,11 +469,7 @@ function nWorkerBuy(){
 			document.getElementById('nWorkerPrice').innerHTML=nWorkerPrice;
 		}
 		document.getElementById('workerAmount').innerHTML=nWorker + " Apple Pickers";
-		var appleRemove = nWorkerPrice;
-		do{
-			app--;
-			appleRemove--;
-		} while (appleRemove >= 1)
+		app -= nWorkerPrice;
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 		document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
 		setInterval(nWorkerGain, 5000 - nWorkerTime);
@@ -523,20 +516,15 @@ function gWorkerBuy(){
 			document.getElementById('gWorkerPrice').innerHTML=gWorkerPrice;
 		}
 		document.getElementById('gWorkerAmount').innerHTML= gWorker + " Good Apple Pickers";
-		var appleRemove = gWorkerPrice;
-		do{
-			app--;
-			appleRemove--;
-		} while (appleRemove >= 1)
+		app -= gWorkerPrice;
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 		document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
-		setInterval(gWorkerGain, 5000 - gWorkerTime);
+		setInterval(gWorkerGain, 4500 - gWorkerTime);
 		setInterval(gWorkerPay, 9000);
 	}
 }
 function gWorkerPay(){
-	app--;
-	app--;
+	app -= 2;
 	document.getElementById('appleAmount').innerHTML=app + " Apples";
 	document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
 }
@@ -548,8 +536,8 @@ function gWorkerSell(){
 		document.getElementById('titleApples').innerHTML=app + " Apples collected | Apple: The Game!";
 		document.getElementById('gWorkerAmount').innerHTML= gWorker + " Good Apple Pickers";
 		if (gWorker == 0){
-			clearInterval(gWorkerPay);
-			clearInterval(gWorkerGain);
+			clearInterval(gWorkerPay());
+			clearInterval(gWorkerGain());
 		}
 		if (gWorker >= 499){
 			document.getElementById('goodHireButton').disabled=false;
@@ -573,11 +561,7 @@ function diaMinerHire(){
 			} while (diaMinerCount <= 8)
 			document.getElementById('diaMinerPrice').innerHTML=diaMinerPrice;
 		}
-		var diamondRemove = diaMinerPrice;
-		do {
-			dia--;
-			diamondRemove--;
-		} while (diamondRemove >= 1)
+		dia -= diaMinerPrice;
 		setInterval(diaMinerGain, 10000 - diaMinerTime);
 		setInterval(diaMinerPay, 15000);
 		document.getElementById('minerAmount').innerHTML= diaMiner + " Miner(s)";
@@ -620,11 +604,7 @@ function amethMinerBuy(){
 			} while (amethMinerCount <= 8)
 			document.getElementById('amethMinerPrice').innerHTML=amethMinerPrice;
 		}
-		var amethRemove = amethMinerPrice;
-		do{
-			ameth--;
-			amethRemove--;
-		} while (amethRemove >= 1)
+		ameth -= amethMinerPrice;
 		document.getElementById('amethystAmount').innerHTML=ameth + " Amethyst";
 		document.getElementById('amethystMinerAmount').innerHTML=amethMiner + " Amethyst Miner(s)";
 		setInterval(amethGain, 15000 - amethMinerTime);
@@ -666,11 +646,7 @@ function breadMakerBuy(){
 			} while (breadMakerCount <= 4)
 			document.getElementById('breadMakerPrice').innerHTML=breadMakerPrice;
 		}
-		var breadRemove = breadMakerPrice;
-		do{
-			bread--;
-			breadRemove--;
-		} while (breadRemove >= 1)
+		bread -= breadMakerPrice;
 		document.getElementById('breadAmount').innerHTML=bread + " Bread";
 		document.getElementById('breadMakerAmount').innerHTML=breadMaker + " Bread Bakers";
 	}
@@ -768,11 +744,7 @@ function amethApple(){
 	}
 	if(ameth >= 1){
 		ameth--;
-		var appleAdd = 1000;
-		do{
-			app++;
-			appleAdd--;
-		} while (appleAdd >= 1)
+		app += 1000;
 		document.getElementById('amethystAmount').innerHTML=ameth + " Amethyst";
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 	}
@@ -798,10 +770,7 @@ function breadBuy(){
 function bWorkerGain(){
 	var chance = Math.floor(Math.random()*5);
 	if (chance = 0){
-		app--;
-		app--;
-		app--;
-		app--;
+		app -= 4;
 	} else {app++;}
 	document.getElementById('appleAmount').innerHTML=app + " Apples";
 	document.getElementById('titleApples').innerHTML=app + " Apples Collected | Apple: The Game!";
@@ -812,15 +781,14 @@ function nWorkerGain(){
 	document.getElementById('titleApples').innerHTML=app + " Apples Collected | Apple: The Game!";
 }
 function gWorkerGain(){
-	app++;
-	app++;
+	app += 2;
 	document.getElementById('appleAmount').innerHTML=app + " Apples";
 	document.getElementById('titleApples').innerHTML=app + " Apples Collected | Apple: The Game!";
 }
 function diaMinerGain(){
 	var chance = Math.floor(Math.random() * 5)
 	if (chance == 5){
-	dia++;
+		dia++;
 	}
 	dia++
 	document.getElementById('diaAmount').innerHTML=dia + " Diamond(s)";
@@ -841,11 +809,7 @@ function breadInvest(){
 		setTimeout(clearNos, 5000);
 	}
 	if(app >= 50){
-		var appleRemove = 50;
-		do{
-			app--;
-			appleRemove--;
-		} while(appleRemove >= 1)
+		app -= 50;
 		document.getElementById('breadUpgrade').innerHTML="Sold Out";
 		document.getElementById('breadUpgrade').disabled="disabled";
 		setInterval(breadInvestGain, 900000);
@@ -861,12 +825,8 @@ function workerSpeedUp(){
 	setTimeout(clearNos, 5000);
 	}
 	if (dia >= 30){
-		var timeSpeedUp = 50;
-		var diamondRemove = 30;
-		do{
-			diamondRemove--;
-			dia--;
-		} while (diamondRemove >= 1)
+		timeSpeedUp = 50;
+		dia -= 30;
 		document.getElementById('workerSpeed').disabled="true";
 		document.getElementById('workerSpeed').innerHTML="Sold Out"
 	}
@@ -878,12 +838,8 @@ function clickUp(){
 		setTimeout(clearNos, 5000);
 	}
 	if (dia >= 50){
-		var diamondRemove = 50
+		dia -= 50
 		appleUp = true;
-		do {
-			diamondRemove--;
-			dia--;
-		} while (diamondRemove >= 1)
 		document.getElementById('clickUp').disabled="true";
 		document.getElementById('diaAmount').innerHTML = dia + " diamond(s)";
 		document.getElementById('clickUp').innerHTML="Sold Out"
@@ -891,7 +847,7 @@ function clickUp(){
 }
 //Finish
 function finishTry(){
-	debugger;
+	//debugger;
 	var finishCheck = app + dia + ameth + bread;
 	if(app <= 9999 || dia <= 499 || ameth <= 299 || bread <= 99){
 		window.alert('You need more Resources!');
@@ -930,11 +886,11 @@ function finishTry(){
 			timeSpeedUp--;
 			timeSpeedUpRemove--;
 		} while (timeSpeedUpRemove >= 1)
-		clearInterval(bWorkerGain);
-		clearInterval(nWorkerGain);
-		clearInterval(gWorkerGain);
-		clearInterval(diaMinerGain);
-		clearInterval(amethGain);
+		clearInterval(bWorkerGain());
+		clearInterval(nWorkerGain());
+		clearInterval(gWorkerGain());
+		clearInterval(diaMinerGain());
+		clearInterval(amethGain());
 		save();
 		setTimeout(function(){location.reload();}, 2000);
 	}
@@ -1021,7 +977,7 @@ function interval(){
 	}
 	if(gWorker >= 1){
 		setInterval(function(){
-			setInterval(gWorkerGain, 5000 - gWorkerTime);
+			setInterval(gWorkerGain, 4500 - gWorkerTime);
 			gwre--;
 			if (gwre <= 0){
 				clearInterval(this);
@@ -1047,7 +1003,7 @@ function interval(){
 		}, 600);
 	}
 	if(breadMaker >= 1){
-		setTimeout(function(){
+		setInterval(function(){
 			setInterval(breadMakerGain, 15000 - breadMakerTime);
 			bmre--;
 			if (bmre <= 0){
@@ -1061,34 +1017,24 @@ function interval(){
 function debugReset(){
 	var pro = prompt("Are you sure you want to reset? (y/n)");
 	if (pro == "y" || pro == "Y"){
-		do{app--;}while(app >= 6)
-		do{app++;}while(app <= 4)
+		app = 5;
 		console.log(app);
-		do{dia--;}while(dia >= 0)
-		do{dia++;}while(dia <= -1)
+		dia = 0;
 		console.log(dia);
-		do{ameth--;}while(ameth >= 0)
-		do{ameth++;}while(ameth <= -1)
+		ameth = 0;
 		console.log(ameth);
-		do{bread--;}while(bread >= 0)
-		do{bread++;}while(bread <= -1)
+		bread = 0;
 		console.log(bread);
 		appleUp = false;
 		console.log(appleUp);
-		do{bWorker--;}while(bWorker >= 0)
-		do{bWorker++;}while(bWorker <= -1)
-		do{nWorker--;}while(nWorker >= 0)
-		do{nWorker++;}while(nWorker <= -1)
-		do{gWorker--;}while(gWorker >= 0)
-		do{gWorker++;}while(gWorker <= -1)
+		bWorker = 0;
+		nWorker = 0;
+		gWorker = 0;
 		console.log(bWorker + nWorker + gWorker);
-		do{diaMiner--;}while(diaMiner >= 0)
-		do{diaMiner++;}while(diaMiner <= -1)
-		do{amethMiner--;}while(amethMiner >= 0)
-		do{amethMiner++;}while(amethMiner <= -1)
+		diaMiner = 0;
+		amethMiner = 0;
 		console.log(diaMiner + amethMiner);
-		do{timeSpeedUp--;}while(timeSpeedUp >= 1)
-		do{timeSpeedUp++;}while(timeSpeedUp <= -1)
+		timeSpeedUp = 0;
 		console.log(timeSpeedUp);
 		clickUp = false;
 		var time = 100 - timeSpeedUp;
@@ -1097,8 +1043,7 @@ function debugReset(){
 		var gWorkerTime = gWorker / time;
 		var diaMinerTime = diaMiner / time;
 		var amethMinerTime = amethMiner / time;
-		do{resetAmount++;}while(resetAmount <= -1)
-		do{resetAmount--;}while(resetAmount >= 1)
+		resetAmount = 0;
 		console.log(resetAmount);
 		nWorkerPrice = 25;
 		gWorkerPrice = 40;
@@ -1110,11 +1055,10 @@ function debugReset(){
 		diaMinerCount = 10;
 		amethMinerCount = 10;
 		breadMakerCount = 5;
-		var cooldownSec = 120;
 		setTimeout(removeNaN, 10)
 		setTimeout(save, 100);
 	} else { 
-		return;
+		console.log('Good Choice');
 	}
 }
 //Extra Modes
