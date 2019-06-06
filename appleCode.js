@@ -434,7 +434,6 @@ function bWorkerBuy() {
 		bWorker++;
 		document.getElementById('badWorkerAmount').innerHTML=bWorker + " Bad Apple Pickers";
 		app += 10;
-		} while (appleRemove >= 1)
 		document.getElementById('appleAmount').innerHTML=app + " Apples";
 		document.getElementById('titleApples').innerHTML=app + " Apples Collected | Apple: The Game!";
 		setInterval(bWorkerGain, 5000 - bWorkerTime);
